@@ -1,0 +1,288 @@
+{
+  "schema_version": "1.0.0",
+  "batch": "phase5-rearshock-4",
+  "nodes": [
+    {
+      "id": "comp-shock-damper",
+      "type": "subcomponent",
+      "name": "Rear Shock Damping Mechanism",
+      "subsystem": "sys-wheels",
+      "aliases": ["Shock Damper", "Damping Mechanism"],
+      "description": "Rear suspension linkage damping mechanism designed to control motion during compression and extension cycles.",
+      "status": "verified",
+      "batch": "phase5-rearshock-4",
+      "properties": {
+        "damping_motion_control": {
+          "key": "damping_motion_control",
+          "name": "Motion Control",
+          "value": "compression and extension",
+          "status": "needs_review",
+          "note": "Damping occurs both on compression and extension cycles"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0921_c00",
+          "book": "big_blue_book",
+          "page": 921,
+          "section": "SHOCKS (REAR SHOCKS)",
+          "quote": "The term “shock” or “rear shock” is the rear suspension linkage damping\nmechanism. Like the damping systems in the front fork, the rear shock is\ndesigned to help control motion.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-shock-air-chamber",
+      "type": "subcomponent",
+      "name": "Pressurized Air Return Spring Chamber",
+      "subsystem": "sys-wheels",
+      "aliases": ["Air Spring Chamber", "Shock Air Chamber"],
+      "description": "Built-in container with pressurized air that compresses when the stanchion moves into the shock body, extending the linkage back after load passes.",
+      "status": "verified",
+      "batch": "phase5-rearshock-4",
+      "properties": {
+        "spring_system": {
+          "key": "spring_system",
+          "name": "Return Spring Type",
+          "value": "pressurized air",
+          "status": "needs_review",
+          "note": "Built-in container with pressurized air compresses under load"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0921_c00",
+          "book": "big_blue_book",
+          "page": 921,
+          "section": "SHOCKS (REAR SHOCKS)",
+          "quote": "The shock may\nhave a built-in container with pressurized air. As the bike hits a bump, the\nrear linkage moves upward making the shock stanchion move into the shock\nbody. This compresses an air chamber, which provides a push to extend back\nthe linkage after the load is passed.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-shock-coil-spring",
+      "type": "subcomponent",
+      "name": "Large External Shock Spring",
+      "subsystem": "sys-wheels",
+      "aliases": ["External Spring", "Damper Spring"],
+      "description": "Large external spring surrounding the damper, available in different compressive strengths.",
+      "status": "verified",
+      "batch": "phase5-rearshock-4",
+      "properties": {
+        "spring_type": {
+          "key": "spring_type",
+          "name": "Spring Form",
+          "value": "external spring",
+          "status": "needs_review",
+          "note": "Large external spring surrounding the damper"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0921_c00",
+          "book": "big_blue_book",
+          "page": 921,
+          "section": "SHOCKS (REAR SHOCKS)",
+          "quote": "The rear shock may also have a large external spring surrounding the\ndamper. These springs are typically available in different compressive\nstrengths.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-shock-frame-bushing",
+      "type": "subcomponent",
+      "name": "Rear Shock Frame Attachment Bushing",
+      "subsystem": "sys-wheels",
+      "aliases": ["Frame Attachment Bushing"],
+      "description": "Bushing of the frame attachments on the rear shock, which can develop wear resulting in play when lifted up and down.",
+      "status": "verified",
+      "batch": "phase5-rearshock-4",
+      "properties": {
+        "wear_inspection": {
+          "key": "wear_inspection",
+          "name": "Play Diagnostic Test",
+          "value": "lift up and down",
+          "status": "needs_review",
+          "note": "Play felt when bike is lifted up and down with foot on pedal"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0921_c00",
+          "book": "big_blue_book",
+          "page": 921,
+          "section": "SHOCKS (REAR SHOCKS)",
+          "quote": "The rear shock can develop wear at the bushing of the frame attachments.\nPlay is felt when the bike is lifted up and down.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-shock-stanchion-seal",
+      "type": "subcomponent",
+      "name": "Shock Stanchion Seal",
+      "subsystem": "sys-wheels",
+      "aliases": ["Stanchion Seal", "Stanchion Bushing"],
+      "description": "Seal or bushing through which the shock stanchion passes, which may develop leakage at the seals.",
+      "status": "verified",
+      "batch": "phase5-rearshock-4",
+      "properties": {
+        "leakage_inspection": {
+          "key": "leakage_inspection",
+          "name": "Inspection Area",
+          "value": "base of stanchion",
+          "status": "needs_review",
+          "note": "Inspect around base of stanchion as it enters the shock body"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0921_c00",
+          "book": "big_blue_book",
+          "page": 921,
+          "section": "SHOCKS (REAR SHOCKS)",
+          "quote": "The shock stanchion also passes through a seal or bushing which may\ndevelop leakage at the seals.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-shock-damper-part-of-rear-shock",
+      "src": "comp-shock-damper",
+      "dst": "comp-rear-shock",
+      "type": "part_of",
+      "claim": "The rear shock damping mechanism is part of the rear shock assembly.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-rearshock-4",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0921_c00",
+          "book": "big_blue_book",
+          "page": 921,
+          "section": "SHOCKS (REAR SHOCKS)",
+          "quote": "The term “shock” or “rear shock” is the rear suspension linkage damping\nmechanism. Like the damping systems in the front fork, the rear shock is\ndesigned to help control motion.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-shock-air-chamber-part-of-rear-shock",
+      "src": "comp-shock-air-chamber",
+      "dst": "comp-rear-shock",
+      "type": "part_of",
+      "claim": "Pressurized air chamber provides return spring extension within the rear shock.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-rearshock-4",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0921_c00",
+          "book": "big_blue_book",
+          "page": 921,
+          "section": "SHOCKS (REAR SHOCKS)",
+          "quote": "The shock may\nhave a built-in container with pressurized air. As the bike hits a bump, the\nrear linkage moves upward making the shock stanchion move into the shock\nbody. This compresses an air chamber, which provides a push to extend back\nthe linkage after the load is passed.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-shock-coil-spring-mounted-on-shock",
+      "src": "comp-shock-coil-spring",
+      "dst": "comp-rear-shock",
+      "type": "mounted_on",
+      "claim": "Large external spring surrounds the rear shock damper.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-rearshock-4",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0921_c00",
+          "book": "big_blue_book",
+          "page": 921,
+          "section": "SHOCKS (REAR SHOCKS)",
+          "quote": "The rear shock may also have a large external spring surrounding the\ndamper. These springs are typically available in different compressive\nstrengths.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-shock-bushing-part-of-rear-shock",
+      "src": "comp-shock-frame-bushing",
+      "dst": "comp-rear-shock",
+      "type": "part_of",
+      "claim": "Frame attachment bushings mount the rear shock to the frame linkages.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-rearshock-4",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0921_c00",
+          "book": "big_blue_book",
+          "page": 921,
+          "section": "SHOCKS (REAR SHOCKS)",
+          "quote": "The rear shock can develop wear at the bushing of the frame attachments.\nPlay is felt when the bike is lifted up and down.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-shock-stanchion-seal-part-of-rear-shock",
+      "src": "comp-shock-stanchion-seal",
+      "dst": "comp-rear-shock",
+      "type": "part_of",
+      "claim": "The seal or bushing through which the shock stanchion passes may develop leakage at the seals.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-rearshock-4",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0921_c00",
+          "book": "big_blue_book",
+          "page": 921,
+          "section": "SHOCKS (REAR SHOCKS)",
+          "quote": "The shock stanchion also passes through a seal or bushing which may\ndevelop leakage at the seals.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    }
+  ]
+}

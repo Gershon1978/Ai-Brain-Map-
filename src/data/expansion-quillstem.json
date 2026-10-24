@@ -1,0 +1,232 @@
+{
+  "schema_version": "1.0.0",
+  "batch": "phase5-quillstem-5",
+  "nodes": [
+    {
+      "id": "comp-quill-wedge",
+      "type": "subcomponent",
+      "name": "Quill Stem Wedge",
+      "subsystem": "sys-cockpit",
+      "aliases": ["Stem Wedge", "Quill Cone"],
+      "description": "A bolt draws up a wedge or cone which secures the stem tightly inside the column.",
+      "status": "verified",
+      "batch": "phase5-quillstem-5",
+      "properties": {
+        "function": {
+          "key": "function",
+          "name": "Stem Retention",
+          "value": "secures stem tightly inside column",
+          "status": "needs_review",
+          "note": "Bolt draws up wedge or cone to secure stem"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0820_c00",
+          "book": "big_blue_book",
+          "page": 820,
+          "section": "QUILL STEMS",
+          "quote": "A bolt draws up a wedge or cone which secures\nthe stem tightly inside the column.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-quill-binder-bolt",
+      "type": "subcomponent",
+      "name": "Quill Stem Binder Bolt",
+      "subsystem": "sys-cockpit",
+      "aliases": ["Stem Binder Bolt"],
+      "description": "The stem binder bolt outside of the quill should have a layer of grease or anti-seize before installing and tightening.",
+      "status": "verified",
+      "batch": "phase5-quillstem-5",
+      "properties": {
+        "lubrication": {
+          "key": "lubrication",
+          "name": "Thread Lubrication",
+          "value": "grease or anti-seize",
+          "status": "needs_review",
+          "note": "Stem binder bolt, bolt head, wedge should have layer of grease or anti-seize"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0820_c00",
+          "book": "big_blue_book",
+          "page": 820,
+          "section": "QUILL STEMS",
+          "quote": "The stem binder bolt, bolt head, wedge,\nand outside of the quill should have a layer of grease or anti-seize before\ninstalling and tightening.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-quill-post",
+      "type": "subcomponent",
+      "name": "Quill Stem Vertical Post",
+      "subsystem": "sys-cockpit",
+      "aliases": ["Quill Section", "Quill Vertical Post"],
+      "description": "The vertical post that inserts inside of a threaded steering column.",
+      "status": "verified",
+      "batch": "phase5-quillstem-5",
+      "properties": {
+        "insertion": {
+          "key": "insertion",
+          "name": "Insertion Location",
+          "value": "inside threaded steering column",
+          "status": "needs_review",
+          "note": "Vertical post inserts inside of a threaded steering column"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0820_c00",
+          "book": "big_blue_book",
+          "page": 820,
+          "section": "QUILL STEMS",
+          "quote": "The “quill” of quill stem refers to the vertical post that inserts inside of a\nthreaded steering column.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "std-quill-diameter-fit",
+      "type": "standard",
+      "name": "Quill to Steering Column Diameter Match",
+      "subsystem": "sys-cockpit",
+      "aliases": ["Quill Diameter Match"],
+      "description": "The stem’s quill diameter is a correct match for the inside diameter of the steering column. The quill should be slightly smaller than the inside of the column.",
+      "status": "verified",
+      "batch": "phase5-quillstem-5",
+      "properties": {
+        "clearance_rule": {
+          "key": "clearance_rule",
+          "name": "Diameter Match",
+          "value": "slightly smaller than column inside",
+          "status": "needs_review",
+          "note": "Quill should be slightly smaller than the inside of the column"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0820_c00",
+          "book": "big_blue_book",
+          "page": 820,
+          "section": "QUILL STEMS",
+          "quote": "It is important that the stem’s quill diameter is a correct match for the\ninside diameter of the steering column. The quill should be slightly smaller\nthan the inside of the column.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-quill-post-part-of-quill-stem",
+      "src": "comp-quill-post",
+      "dst": "comp-stem-quill",
+      "type": "part_of",
+      "claim": "The vertical post inserts inside of a threaded steering column.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-quillstem-5",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0820_c00",
+          "book": "big_blue_book",
+          "page": 820,
+          "section": "QUILL STEMS",
+          "quote": "The “quill” of quill stem refers to the vertical post that inserts inside of a\nthreaded steering column.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-quill-wedge-part-of-quill-stem",
+      "src": "comp-quill-wedge",
+      "dst": "comp-stem-quill",
+      "type": "part_of",
+      "claim": "A bolt draws up a wedge or cone which secures the stem tightly inside the column.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-quillstem-5",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0820_c00",
+          "book": "big_blue_book",
+          "page": 820,
+          "section": "QUILL STEMS",
+          "quote": "A bolt draws up a wedge or cone which secures\nthe stem tightly inside the column.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-quill-binder-bolt-part-of-quill-stem",
+      "src": "comp-quill-binder-bolt",
+      "dst": "comp-stem-quill",
+      "type": "part_of",
+      "claim": "The stem binder bolt outside of the quill should have a layer of grease or anti-seize before installing and tightening.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-quillstem-5",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0820_c00",
+          "book": "big_blue_book",
+          "page": 820,
+          "section": "QUILL STEMS",
+          "quote": "The stem binder bolt, bolt head, wedge,\nand outside of the quill should have a layer of grease or anti-seize before\ninstalling and tightening.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-quill-stem-conforms-to-diameter-fit",
+      "src": "comp-stem-quill",
+      "dst": "std-quill-diameter-fit",
+      "type": "conforms_to",
+      "claim": "It is important that the stem’s quill diameter is a correct match for the inside diameter of the steering column.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-quillstem-5",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0820_c00",
+          "book": "big_blue_book",
+          "page": 820,
+          "section": "QUILL STEMS",
+          "quote": "It is important that the stem’s quill diameter is a correct match for the\ninside diameter of the steering column. The quill should be slightly smaller\nthan the inside of the column.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,572 @@
+{
+  "schema_version": "1.0.0",
+  "batch": "phase5-brake-1",
+  "nodes": [
+    {
+      "id": "comp-brake-pad",
+      "type": "subcomponent",
+      "name": "Disc Brake Pad",
+      "subsystem": "sys-brakes",
+      "aliases": ["Brake Pad", "Friction Pad"],
+      "description": "Friction lining component installed within disc brake calipers to generate stopping torque against the rotor.",
+      "status": "verified",
+      "batch": "phase5-brake-1",
+      "properties": {
+        "pad_wear_inspection": {
+          "key": "pad_wear_inspection",
+          "name": "Brake Pad Thickness Inspection",
+          "value": "required",
+          "status": "needs_review",
+          "note": "Verify brake pad thickness periodically"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "bike_repair_manual_chris_p0112_c03",
+          "book": "bike_repair_manual_chris",
+          "page": 112,
+          "section": "V-BRAKE ANATOMY",
+          "quote": "3.  **Brake Pad Thickness:** Measure brake pad thickness and replace as needed.",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "id": "std-brake-six-bolt",
+      "type": "standard",
+      "name": "Six-Bolt Rotor Mounting Standard",
+      "subsystem": "sys-brakes",
+      "aliases": ["6-Bolt Standard", "IS 6-Bolt Disc Interface", "Torx T25 Rotor Interface"],
+      "description": "International standard specifying six M5 threaded bolts fastening the rotor disc to the hub shell flange.",
+      "status": "verified",
+      "batch": "phase5-brake-1",
+      "properties": {
+        "bolt_count": {
+          "key": "bolt_count",
+          "name": "Rotor Mounting Fastener Count",
+          "value": 6,
+          "status": "needs_review",
+          "note": "Six bolts on flange"
+        },
+        "bolt_thread": {
+          "key": "bolt_thread",
+          "name": "Mounting Bolt Thread Size",
+          "value": "M5",
+          "status": "needs_review",
+          "note": "M5 threading Torx T-25"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0679_c00",
+          "book": "big_blue_book",
+          "page": 679,
+          "section": "DISC BRAKE ROTORS",
+          "quote": "The common system uses six bolts on a flange built into the hub shell.\nRotor-mounting bolts are M5 threading and typically use a Torx® T-25 size\nwrench",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "std-brake-centerlock",
+      "type": "standard",
+      "name": "Center Lock Rotor Mounting Standard",
+      "subsystem": "sys-brakes",
+      "aliases": ["CenterLock Standard", "Center-Lock Splined Interface"],
+      "description": "Splined hub mounting interface engineered to secure matching internally-splined disc brake rotors using a dedicated lockring.",
+      "status": "verified",
+      "batch": "phase5-brake-1",
+      "properties": {
+        "interface_pattern": {
+          "key": "interface_pattern",
+          "name": "Spline Fitting Pattern",
+          "value": "splined",
+          "status": "needs_review",
+          "note": "Splined fittings with matching internal pattern"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0679_c00",
+          "book": "big_blue_book",
+          "page": 679,
+          "section": "DISC BRAKE ROTORS",
+          "quote": "A “center-lock” hub is designed with splined fittings to accept rotors\nmade with a matching internal pattern. The rotor is held tight with a\nlockring.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "std-brake-centerlock-torque",
+      "type": "standard",
+      "name": "Center Lock Ring Torque Specification",
+      "subsystem": "sys-brakes",
+      "aliases": ["Center Lock Tightening Torque", "40 N·m Lockring Standard"],
+      "description": "Torque specification standard specifying 40 N·m tightening torque for Center Lock disc brake lockrings.",
+      "status": "needs_review",
+      "batch": "phase5-brake-1",
+      "properties": {
+        "torque_rating": {
+          "key": "torque_rating",
+          "name": "Fastener Tightening Torque",
+          "value": 40,
+          "unit": "N·m",
+          "status": "needs_review",
+          "note": "40 N·m indicated on lockring"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0680_c02",
+          "book": "big_blue_book",
+          "page": 680,
+          "quote": "*   **Center Lock Ring:** 40 N·m (as indicated on the lock ring itself). Verify with service manual.",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "id": "comp-brake-lever",
+      "type": "component",
+      "name": "Hydraulic Brake Lever",
+      "subsystem": "sys-brakes",
+      "aliases": ["Brake Lever", "Hydraulic Master Cylinder Lever"],
+      "description": "Handlebar-mounted master cylinder unit actuated by rider hand pressure to displace hydraulic fluid down to the caliper.",
+      "status": "verified",
+      "batch": "phase5-brake-1",
+      "properties": {
+        "fluid_exit_port": {
+          "key": "fluid_exit_port",
+          "name": "Fluid Bleed Exit Location",
+          "value": "lever",
+          "status": "needs_review",
+          "note": "excess fluid exits at lever"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0710_c00",
+          "book": "big_blue_book",
+          "page": 710,
+          "section": "HAYES® HYDRAULIC CALIPER BRAKES",
+          "quote": "The brakes bleed from\ncaliper upward, and excess fluid exits at lever.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-brake-hose",
+      "type": "component",
+      "name": "Brake Line",
+      "subsystem": "sys-brakes",
+      "aliases": [],
+      "description": "Bicycle brake line requiring care and caution during clamp usage.",
+      "status": "needs_review",
+      "batch": "phase5-brake-1",
+      "properties": {
+        "handling_requirement": {
+          "key": "handling_requirement",
+          "name": "Hose Line Handling Caution",
+          "value": "careful",
+          "status": "needs_review",
+          "note": "be careful when using any brake lines"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0728_c04",
+          "book": "big_blue_book",
+          "page": 728,
+          "section": "*   DOT FLUID, CAUSTIC MATERIAL. USE PROPER GLOVES.",
+          "quote": "be careful when using any brake lines.",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "id": "proc-brake-bleed",
+      "type": "procedure",
+      "name": "Hydraulic Caliper Bleed Procedure",
+      "subsystem": "sys-brakes",
+      "aliases": ["Brake Bleed Procedure", "Hydraulic Bleeding Method"],
+      "description": "Maintenance procedure establishing an uphill path from caliper upward to lever to purge air bubbles from the hydraulic system.",
+      "status": "verified",
+      "batch": "phase5-brake-1",
+      "properties": {
+        "flow_direction": {
+          "key": "flow_direction",
+          "name": "Purge Flow Path",
+          "value": "caliper upward to lever",
+          "status": "needs_review",
+          "note": "uphill path from caliper body to lever"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0731_c00",
+          "book": "big_blue_book",
+          "page": 731,
+          "section": "TEKTRO® HYDRAULIC BRAKES",
+          "quote": "Procedure to bleed Tektro® caliper brakes:\na. Hold bike in repair stand and rotate bike so there is an uphill path from\ncaliper body to lever.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "rule-brake-qualified-service",
+      "type": "safety_constraint",
+      "name": "Hydraulic Brake Qualified Service Rule",
+      "subsystem": "sys-brakes",
+      "aliases": ["Qualified Mechanic Service Rule", "Brake Safety Standard"],
+      "description": "Safety directive mandating specialized mechanical qualification prior to servicing high-pressure hydraulic bicycle brakes.",
+      "status": "verified",
+      "batch": "phase5-brake-1",
+      "properties": {
+        "qualification_level": {
+          "key": "qualification_level",
+          "name": "Mechanic Qualification Level",
+          "value": "professional",
+          "status": "needs_review",
+          "note": "requires specialized knowledge and skill"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0728_c04",
+          "book": "big_blue_book",
+          "page": 728,
+          "section": "*   DOT FLUID, CAUSTIC MATERIAL. USE PROPER GLOVES.",
+          "quote": "lic brake systems require specialized knowledge and skill. If you are not qualified, seek the assistance of a professional mechanic.",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "id": "rule-brake-fluid-contamination",
+      "type": "safety_constraint",
+      "name": "Brake Pad Fluid Contamination Safety Rule",
+      "subsystem": "sys-brakes",
+      "aliases": ["Pad Contamination Prevention Rule"],
+      "description": "Safety precaution requiring brake pad removal prior to hydraulic bleeding procedures to prevent oil contamination of friction materials.",
+      "status": "verified",
+      "batch": "phase5-brake-1",
+      "properties": {
+        "pad_removal_on_bleed": {
+          "key": "pad_removal_on_bleed",
+          "name": "Pad Removal Requirement",
+          "value": "recommended",
+          "status": "needs_review",
+          "note": "best to remove pads to avoid contamination"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0731_c00",
+          "book": "big_blue_book",
+          "page": 731,
+          "section": "TEKTRO® HYDRAULIC BRAKES",
+          "quote": "While the system can be bled with brake pads in place, it is best to remove\npads to avoid any chance of contamination with brake fluid.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "std-brake-thru-axle",
+      "type": "standard",
+      "name": "Thru-Axle Diameter (unconfirmed)",
+      "subsystem": "sys-brakes",
+      "aliases": [],
+      "description": "Presumed 12mm or 15mm thru-axle diameter observation on modern disc brake hub that cannot be definitively determined from visual data.",
+      "status": "needs_review",
+      "batch": "phase5-brake-1",
+      "properties": {
+        "presumed_diameters": {
+          "key": "presumed_diameters",
+          "name": "Presumed Axle Diameters",
+          "value": "12mm or 15mm",
+          "status": "needs_review",
+          "note": "12mm or 15mm based on modern disc brake standards"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0253_c01",
+          "book": "big_blue_book",
+          "page": 253,
+          "quote": "*   **Thru-Axle Diameter:**  Presumed to be 12mm or 15mm based on modern disc brake standards (cannot be definitively determined from image).",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.95
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "comp-brake-pad_part_of_comp-caliper-hydraulic",
+      "src": "comp-brake-pad",
+      "dst": "comp-caliper-hydraulic",
+      "type": "part_of",
+      "claim": "Brake pads are mounted inside the hydraulic caliper body.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-brake-1",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0731_c00",
+          "book": "big_blue_book",
+          "page": 731,
+          "section": "TEKTRO® HYDRAULIC BRAKES",
+          "quote": "Remove wheel and remove brake pads from\ncaliper.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-rotor-6bolt_conforms_to_std-brake-six-bolt",
+      "src": "comp-rotor-6bolt",
+      "dst": "std-brake-six-bolt",
+      "type": "conforms_to",
+      "claim": "Six-bolt disc brake rotor conforms to six M5 bolts on the hub shell mounting flange standard.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-brake-1",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0679_c00",
+          "book": "big_blue_book",
+          "page": 679,
+          "section": "DISC BRAKE ROTORS",
+          "quote": "The common system uses six bolts on a flange built into the hub shell.\nRotor-mounting bolts are M5 threading and typically use a Torx® T-25 size\nwrench",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-hub-centerlock_conforms_to_std-brake-centerlock",
+      "src": "comp-hub-centerlock",
+      "dst": "std-brake-centerlock",
+      "type": "conforms_to",
+      "claim": "CenterLock rotor hub interface conforms to splined matching pattern held tight with a lockring.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-brake-1",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0679_c00",
+          "book": "big_blue_book",
+          "page": 679,
+          "section": "DISC BRAKE ROTORS",
+          "quote": "A “center-lock” hub is designed with splined fittings to accept rotors\nmade with a matching internal pattern. The rotor is held tight with a\nlockring.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "std-brake-centerlock_has_property_std-brake-centerlock-torque",
+      "src": "std-brake-centerlock",
+      "dst": "std-brake-centerlock-torque",
+      "type": "has_property",
+      "claim": "Center Lock lockring standard specifies 40 N·m tightening torque.",
+      "status": "needs_review",
+      "evidence_type": "manufacturer_specification",
+      "confidence": 0.95,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-brake-1",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0680_c02",
+          "book": "big_blue_book",
+          "page": 680,
+          "quote": "*   **Center Lock Ring:** 40 N·m (as indicated on the lock ring itself). Verify with service manual.",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "id": "comp-brake-lever_interfaces_with_comp-caliper-hydraulic",
+      "src": "comp-brake-lever",
+      "dst": "comp-caliper-hydraulic",
+      "type": "interfaces_with",
+      "claim": "Hydraulic brake lever connects fluid pressure circuit upward from caliper.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-brake-1",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0710_c00",
+          "book": "big_blue_book",
+          "page": 710,
+          "section": "HAYES® HYDRAULIC CALIPER BRAKES",
+          "quote": "The brakes bleed from\ncaliper upward, and excess fluid exits at lever.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-brake-hose_interfaces_with_comp-caliper-hydraulic",
+      "src": "comp-brake-hose",
+      "dst": "comp-caliper-hydraulic",
+      "type": "interfaces_with",
+      "claim": "Brake lines used with clamps require caution around caliper and hydraulic lines.",
+      "status": "needs_review",
+      "evidence_type": "service_manual",
+      "confidence": 0.95,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-brake-1",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0728_c04",
+          "book": "big_blue_book",
+          "page": 728,
+          "section": "*   DOT FLUID, CAUSTIC MATERIAL. USE PROPER GLOVES.",
+          "quote": "be careful when using any brake lines.",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "id": "proc-brake-bleed_affects_comp-caliper-hydraulic",
+      "src": "proc-brake-bleed",
+      "dst": "comp-caliper-hydraulic",
+      "type": "affects",
+      "claim": "Bleed procedure clears air bubbles from caliper upward to the lever.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-brake-1",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0731_c00",
+          "book": "big_blue_book",
+          "page": 731,
+          "section": "TEKTRO® HYDRAULIC BRAKES",
+          "quote": "Procedure to bleed Tektro® caliper brakes:\na. Hold bike in repair stand and rotate bike so there is an uphill path from\ncaliper body to lever.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "rule-brake-qualified-service_constrains_sys-brakes",
+      "src": "rule-brake-qualified-service",
+      "dst": "sys-brakes",
+      "type": "constrains",
+      "claim": "Hydraulic braking systems constrain servicing to qualified mechanics.",
+      "status": "verified",
+      "evidence_type": "curated_rule",
+      "confidence": 0.95,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-brake-1",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0728_c04",
+          "book": "big_blue_book",
+          "page": 728,
+          "section": "*   DOT FLUID, CAUSTIC MATERIAL. USE PROPER GLOVES.",
+          "quote": "lic brake systems require specialized knowledge and skill. If you are not qualified, seek the assistance of a professional mechanic.",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "id": "comp-caliper-hydraulic_part_of_sys-brakes",
+      "src": "comp-caliper-hydraulic",
+      "dst": "sys-brakes",
+      "type": "part_of",
+      "claim": "Hydraulic brake caliper assembly is a direct constituent of the braking subsystem.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-brake-1",
+      "evidence": [
+        {
+          "chunk_id": "bike_repair_manual_chris_p0112_c03",
+          "book": "bike_repair_manual_chris",
+          "page": 112,
+          "section": "V-BRAKE ANATOMY",
+          "quote": "*   **B.3 Front Brake:** Hydraulic disc brake. Caliper mounting is a standard post-mount. Verify brake pad thickness.",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "id": "comp-rear-hub_interfaces_with_std-brake-thru-axle",
+      "src": "comp-rear-hub",
+      "dst": "std-brake-thru-axle",
+      "type": "interfaces_with",
+      "claim": "Rear wheel hub interface with presumed 12mm or 15mm thru-axle diameter is visually estimated and unconfirmed.",
+      "status": "needs_review",
+      "evidence_type": "service_manual",
+      "confidence": 0.95,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-brake-1",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0253_c01",
+          "book": "big_blue_book",
+          "page": 253,
+          "quote": "*   **Thru-Axle Diameter:**  Presumed to be 12mm or 15mm based on modern disc brake standards (cannot be definitively determined from image).",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.95
+        }
+      ]
+    }
+  ]
+}

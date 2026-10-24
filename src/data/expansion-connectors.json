@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.0.0",
+  "batch": "phase6-connectors-3",
+  "nodes": [],
+  "edges": [
+    {
+      "id": "edge-conn-rotor-on-rearhub",
+      "src": "comp-rotor-6bolt",
+      "dst": "comp-rear-hub",
+      "type": "mounted_on",
+      "claim": "The rotor is bolted to the rear hub.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase6-connectors-1",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0679_c00",
+          "book": "big_blue_book",
+          "page": 679,
+          "section": "DISC BRAKE ROTORS",
+          "quote": "The common system uses six bolts on a flange built into the hub shell.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-conn-quill-in-steerer",
+      "src": "comp-stem-quill",
+      "dst": "comp-steerer",
+      "type": "mounted_on",
+      "claim": "The quill stem sits inside the steerer.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase6-connectors-1",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0820_c00",
+          "book": "big_blue_book",
+          "page": 820,
+          "section": "QUILL STEMS",
+          "quote": "the vertical post that inserts inside of a\nthreaded steering column.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-conn-hub135-constrains-rearhub",
+      "src": "rule-hub-135mm",
+      "dst": "comp-rear-hub",
+      "type": "constrains",
+      "claim": "The 135mm hub-width rule governs the rear hub.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase6-connectors-1",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0219_c01",
+          "book": "big_blue_book",
+          "page": 219,
+          "quote": "10mm Axle, 6-12 Speeds, 135mm Hub Width: MTB internal gear hubs, road disc brake hubs",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-conn2-headset-threadless-part-of",
+      "src": "comp-headset-threadless",
+      "dst": "comp-headset",
+      "type": "part_of",
+      "claim": "A threadless headset is one kind of headset: EC, ZS and IS types share the same operating principle and adjustment procedure.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase6-connectors-2",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0861_c00",
+          "book": "big_blue_book",
+          "page": 861,
+          "section": "THREADLESS HEADSET ADJUSTMENT",
+          "quote": "Threadless headsets, including EC, ZS, and IS types, operate on the same",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-conn2-hubmotor-fits-rearhub",
+      "src": "comp-ebike-motor",
+      "dst": "comp-rear-hub",
+      "type": "fits_into",
+      "claim": "A hub motor is an electric motor built into the hub of a wheel, driving that wheel directly.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase6-connectors-2",
+      "evidence": [
+        {
+          "chunk_id": "Ai_generated_ebike_motor_p0003_c00",
+          "book": "Ai_generated_ebike_motor",
+          "page": 3,
+          "section": "1. GLOSSARY OF TERMS",
+          "quote": "Hub Motor An electric motor built into the hub of a wheel, directly driving the",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-conn2-xiaomi-indicates-motor",
+      "src": "ec-xiaomi-table",
+      "dst": "comp-ebike-motor",
+      "type": "indicates",
+      "claim": "The Xiaomi error-code table includes codes that indicate controller or motor faults.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase6-connectors-2",
+      "evidence": [
+        {
+          "chunk_id": "xiaomi_ebike_escooter_p0001_c02",
+          "book": "xiaomi_ebike_escooter",
+          "page": 1,
+          "section": "5. The following error codes suggest issues with the controller or motor:",
+          "quote": "5. The following error codes suggest issues with the controller or motor:",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-conn2-dotfluid-constrains-caliper",
+      "src": "rule-brake-fluid-contamination",
+      "dst": "comp-caliper-hydraulic",
+      "type": "constrains",
+      "claim": "DOT brake fluid is caustic, so servicing a hydraulic caliper that uses it requires proper gloves.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase6-connectors-2",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0728_c04",
+          "book": "big_blue_book",
+          "page": 728,
+          "section": "*   DOT FLUID, CAUSTIC MATERIAL. USE PROPER GLOVES.",
+          "quote": "DOT FLUID, CAUSTIC MATERIAL. USE PROPER GLOVES.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-conn3-cassette-has-chainline",
+      "src": "comp-cassette",
+      "dst": "prop-chainline",
+      "type": "has_property",
+      "claim": "Chainline is the relation of the front and rear sprockets to the center plane, so chainline is a property of the cassette's sprocket stack.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase6-connectors-3",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0585_c00",
+          "book": "big_blue_book",
+          "page": 585,
+          "section": "CHAINLINE",
+          "quote": "Chainline is the relation of the front and rear sprockets to the center plane",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-conn3-freewheel-interfaces-cassette",
+      "src": "comp-freewheel",
+      "dst": "comp-cassette",
+      "type": "interfaces_with",
+      "claim": "A cassette and a freewheel are the two rear-sprocket systems: both let the rear wheel turn while the pedals stay still.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase6-connectors-3",
+      "evidence": [
+        {
+          "chunk_id": "bike_repair_manual_chris_p0066_c00",
+          "book": "bike_repair_manual_chris",
+          "page": 66,
+          "section": "MAINTAINING YOUR TRANSMISSION • CHAIN, CASSETTE, AND CHAINSET",
+          "quote": "The cassette and freewheel allow the rear\nwheel to rotate while the pedals remain",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    }
+  ]
+}

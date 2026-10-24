@@ -1,0 +1,91 @@
+{
+  "ontology_version": "1.0.0",
+  "relations": {
+    "part_of": {
+      "symmetric": false,
+      "inverse": "contains",
+      "description": "Physical structural containment within a parent assembly or subsystem.",
+      "allowed_source_types": ["component", "subcomponent", "property"],
+      "allowed_target_types": ["subsystem", "component", "vehicle"]
+    },
+    "contains": {
+      "symmetric": false,
+      "inverse": "part_of",
+      "description": "Parent entity contains a child subcomponent or physical element.",
+      "allowed_source_types": ["subsystem", "component", "vehicle"],
+      "allowed_target_types": ["component", "subcomponent"]
+    },
+    "fits_into": {
+      "symmetric": false,
+      "description": "Physical mating interface insertion (e.g. cassette cogs onto freehub splines).",
+      "allowed_source_types": ["component", "subcomponent"],
+      "allowed_target_types": ["component", "subcomponent", "interface"]
+    },
+    "mounted_on": {
+      "symmetric": false,
+      "description": "Clamped or fastened mounting relationship.",
+      "allowed_source_types": ["component", "subcomponent"],
+      "allowed_target_types": ["component", "subcomponent"]
+    },
+    "interfaces_with": {
+      "symmetric": true,
+      "description": "Shared mechanical boundary or kinematic bearing interface.",
+      "allowed_source_types": ["component", "subcomponent", "interface"],
+      "allowed_target_types": ["component", "subcomponent", "interface"]
+    },
+    "conforms_to": {
+      "symmetric": false,
+      "description": "Dimensional or standard specification conformance.",
+      "allowed_source_types": ["component", "subcomponent", "vehicle"],
+      "allowed_target_types": ["standard", "measurement", "interface"]
+    },
+    "has_property": {
+      "symmetric": false,
+      "description": "Attribute assignment for mechanical properties or measurements.",
+      "allowed_source_types": ["component", "subcomponent", "standard"],
+      "allowed_target_types": ["property", "measurement", "component"]
+    },
+    "affects": {
+      "symmetric": false,
+      "description": "Operational influence where changing source impacts target function.",
+      "allowed_source_types": ["property", "component", "measurement"],
+      "allowed_target_types": ["component", "subsystem", "procedure"]
+    },
+    "constrains": {
+      "symmetric": false,
+      "description": "Operational, electrical, or physical rule limiting target.",
+      "allowed_source_types": ["compatibility_rule", "safety_constraint", "standard"],
+      "allowed_target_types": ["component", "subsystem", "procedure"]
+    },
+    "compatible_with": {
+      "symmetric": true,
+      "description": "Verified physical, dimensional, and operational fitment without caveats.",
+      "allowed_source_types": ["component", "subcomponent", "standard"],
+      "allowed_target_types": ["component", "subcomponent", "standard"]
+    },
+    "conditionally_compatible_with": {
+      "symmetric": true,
+      "description": "Compatible only when documented adapters or conditions are satisfied.",
+      "allowed_source_types": ["component", "subcomponent", "standard"],
+      "allowed_target_types": ["component", "subcomponent", "standard"]
+    },
+    "incompatible_with": {
+      "symmetric": true,
+      "description": "Explicit physical or chemical exclusion.",
+      "allowed_source_types": ["component", "subcomponent", "property", "standard"],
+      "allowed_target_types": ["component", "subcomponent", "property", "standard"]
+    },
+    "indicates": {
+      "symmetric": false,
+      "description": "Diagnostic symptom or error code indicates component fault.",
+      "allowed_source_types": ["symptom", "error_code"],
+      "allowed_target_types": ["component", "failure_mode"]
+    },
+    "unknown_due_to_missing_evidence": {
+      "symmetric": false,
+      "description": "Explicit placeholder representing missing evidence in knowledge corpus.",
+      "allowed_source_types": ["unknown_requirement"],
+      "allowed_target_types": ["component", "standard", "property"]
+    }
+  }
+}

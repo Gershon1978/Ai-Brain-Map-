@@ -1,0 +1,288 @@
+{
+  "schema_version": "1.0.0",
+  "batch": "phase5-cassette-6",
+  "nodes": [
+    {
+      "id": "comp-cassette-sprockets",
+      "type": "subcomponent",
+      "name": "Cassette Sprockets",
+      "subsystem": "sys-drivetrain",
+      "aliases": ["Sprockets"],
+      "description": "The sprockets on both can also wear.",
+      "status": "verified",
+      "batch": "phase5-cassette-6",
+      "properties": {
+        "sprocket_wear": {
+          "key": "sprocket_wear",
+          "name": "Sprocket Wear",
+          "value": "wear and need replacing",
+          "status": "needs_review",
+          "note": "The sprockets on both can also wear"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "bike_repair_manual_chris_p0066_c00",
+          "book": "bike_repair_manual_chris",
+          "page": 66,
+          "section": "MAINTAINING YOUR TRANSMISSION • CHAIN, CASSETTE, AND CHAINSET",
+          "quote": "The sprockets on both can\nalso wear.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-freewheel",
+      "type": "component",
+      "name": "Freewheel",
+      "subsystem": "sys-drivetrain",
+      "aliases": ["Freewheel Part"],
+      "description": "The cassette and freewheel allow the rear wheel to rotate while the pedals remain stationary.",
+      "status": "verified",
+      "batch": "phase5-cassette-6",
+      "properties": {
+        "rotation": {
+          "key": "rotation",
+          "name": "Wheel Rotation",
+          "value": "rotate while pedals remain stationary",
+          "status": "needs_review",
+          "note": "Allow rear wheel to rotate while pedals remain stationary"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "bike_repair_manual_chris_p0066_c00",
+          "book": "bike_repair_manual_chris",
+          "page": 66,
+          "section": "MAINTAINING YOUR TRANSMISSION • CHAIN, CASSETTE, AND CHAINSET",
+          "quote": "The cassette and freewheel allow the rear\nwheel to rotate while the pedals remain\nstationary.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-freewheel-block",
+      "type": "subcomponent",
+      "name": "Freewheel Block",
+      "subsystem": "sys-drivetrain",
+      "aliases": ["Block in a Freewheel"],
+      "description": "Their internal mechanisms – the freehub body of a cassette and the block in a freewheel – will eventually wear out and need replacing.",
+      "status": "verified",
+      "batch": "phase5-cassette-6",
+      "properties": {
+        "block_wear": {
+          "key": "block_wear",
+          "name": "Block Replacement",
+          "value": "wear out and need replacing",
+          "status": "needs_review",
+          "note": "The block in a freewheel will eventually wear out and need replacing"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "bike_repair_manual_chris_p0066_c00",
+          "book": "bike_repair_manual_chris",
+          "page": 66,
+          "section": "MAINTAINING YOUR TRANSMISSION • CHAIN, CASSETTE, AND CHAINSET",
+          "quote": "Their internal mechanisms – the\nfreehub body of a cassette and the block in \na freewheel – will eventually wear out and\nneed replacing.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-cassette-lockring",
+      "type": "subcomponent",
+      "name": "Lockring at the Centre of the Cassette",
+      "subsystem": "sys-drivetrain",
+      "aliases": ["Lockring"],
+      "description": "The lockring at the centre of the cassette.",
+      "status": "verified",
+      "batch": "phase5-cassette-6",
+      "properties": {
+        "lockring_teeth": {
+          "key": "lockring_teeth",
+          "name": "Lockring Teeth",
+          "value": "teeth at the centre",
+          "status": "needs_review",
+          "note": "Teeth of the lockring at the centre of the cassette"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "bike_repair_manual_chris_p0066_c00",
+          "book": "bike_repair_manual_chris",
+          "page": 66,
+          "section": "MAINTAINING YOUR TRANSMISSION • CHAIN, CASSETTE, AND CHAINSET",
+          "quote": "Insert the cassette remover into the teeth of\nthe lockring at the centre of the cassette.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "rule-remover-tool-depends",
+      "type": "compatibility_rule",
+      "name": "Tools for Removing a Freewheel and a Cassette Depend on the Manufacturer",
+      "subsystem": "sys-drivetrain",
+      "aliases": ["Remover Tool"],
+      "description": "The tools for removing a freewheel and a cassette depend on the manufacturer of the part that is fitted to the bike.",
+      "status": "verified",
+      "batch": "phase5-cassette-6",
+      "properties": {
+        "manufacturer_stamped": {
+          "key": "manufacturer_stamped",
+          "name": "Manufacturer Name",
+          "value": "stamped on the component",
+          "status": "needs_review",
+          "note": "Manufacturer name is usually stamped on the component"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "bike_repair_manual_chris_p0066_c00",
+          "book": "bike_repair_manual_chris",
+          "page": 66,
+          "section": "MAINTAINING YOUR TRANSMISSION • CHAIN, CASSETTE, AND CHAINSET",
+          "quote": "The tools for removing a freewheel and a\ncassette depend on the manufacturer of the\npart that is fitted to the bike.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-sprockets-part-of-cassette",
+      "src": "comp-cassette-sprockets",
+      "dst": "comp-cassette",
+      "type": "part_of",
+      "claim": "The sprockets on both can also wear.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-cassette-6",
+      "evidence": [
+        {
+          "chunk_id": "bike_repair_manual_chris_p0066_c00",
+          "book": "bike_repair_manual_chris",
+          "page": 66,
+          "section": "MAINTAINING YOUR TRANSMISSION • CHAIN, CASSETTE, AND CHAINSET",
+          "quote": "The sprockets on both can\nalso wear.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-lockring-part-of-cassette",
+      "src": "comp-cassette-lockring",
+      "dst": "comp-cassette",
+      "type": "part_of",
+      "claim": "Lockring part of the cassette at the centre.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-cassette-6",
+      "evidence": [
+        {
+          "chunk_id": "bike_repair_manual_chris_p0066_c00",
+          "book": "bike_repair_manual_chris",
+          "page": 66,
+          "section": "MAINTAINING YOUR TRANSMISSION • CHAIN, CASSETTE, AND CHAINSET",
+          "quote": "Insert the cassette remover into the teeth of\nthe lockring at the centre of the cassette.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-freewheel-part-of-drivetrain",
+      "src": "comp-freewheel",
+      "dst": "sys-drivetrain",
+      "type": "part_of",
+      "claim": "The cassette and freewheel allow the rear wheel to rotate while the pedals remain stationary.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-cassette-6",
+      "evidence": [
+        {
+          "chunk_id": "bike_repair_manual_chris_p0066_c00",
+          "book": "bike_repair_manual_chris",
+          "page": 66,
+          "section": "MAINTAINING YOUR TRANSMISSION • CHAIN, CASSETTE, AND CHAINSET",
+          "quote": "The cassette and freewheel allow the rear\nwheel to rotate while the pedals remain\nstationary.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-remover-tool-constrains-cassette",
+      "src": "rule-remover-tool-depends",
+      "dst": "comp-cassette",
+      "type": "constrains",
+      "claim": "The tools for removing a cassette depend on the manufacturer of the part that is fitted to the bike.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-cassette-6",
+      "evidence": [
+        {
+          "chunk_id": "bike_repair_manual_chris_p0066_c00",
+          "book": "bike_repair_manual_chris",
+          "page": 66,
+          "section": "MAINTAINING YOUR TRANSMISSION • CHAIN, CASSETTE, AND CHAINSET",
+          "quote": "The tools for removing a freewheel and a\ncassette depend on the manufacturer of the\npart that is fitted to the bike.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-block-part-of-freewheel",
+      "src": "comp-freewheel-block",
+      "dst": "comp-freewheel",
+      "type": "part_of",
+      "claim": "Their internal mechanisms – the freehub body of a cassette and the block in a freewheel – will eventually wear out and need replacing.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-cassette-6",
+      "evidence": [
+        {
+          "chunk_id": "bike_repair_manual_chris_p0066_c00",
+          "book": "bike_repair_manual_chris",
+          "page": 66,
+          "section": "MAINTAINING YOUR TRANSMISSION • CHAIN, CASSETTE, AND CHAINSET",
+          "quote": "Their internal mechanisms – the\nfreehub body of a cassette and the block in \na freewheel – will eventually wear out and\nneed replacing.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    }
+  ]
+}

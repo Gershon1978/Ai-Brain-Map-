@@ -1,0 +1,352 @@
+{
+  "generated_from": "kb.db read-only, texts are verbatim chunk.text",
+  "generated_by": "supervisor",
+  "note": "Do not edit or paraphrase these texts. This file exists so the quote self-check compares against the real corpus, not against rewritten copies. | GREW-2026-10-25: +7 chunks (43 total) approved by the owner to join the last 6 islands - p0663_c00, p0693_c00, p0088_c00, p0089_c00, p0071_c05, p0148_c00, p0003_c00",
+  "chunk_count": 43,
+  "chunks": {
+    "Ai_generated_ebike_motor_p0003_c00": {
+      "chunk_id": "Ai_generated_ebike_motor_p0003_c00",
+      "book": "Ai_generated_ebike_motor",
+      "page": 3,
+      "section": "1. GLOSSARY OF TERMS",
+      "has_visual_data": false,
+      "text": "Motor Dyno Testing and Benchmarking \nFrequently Asked Questions \nReference Tables and Data Sheets \nAppendices \n1. GLOSSARY OF TERMS \nTerm Definition \nBLDC Brushless Direct Current motor. The most common motor type in modern \ne-bikes and e-scooters. Uses electronic commutation instead of mechanical \nbrushes. \nHub Motor An electric motor built into the hub of a wheel, directly driving the \nwheel. \nMid-Drive Motor A motor mounted at the bicycle's bottom bracket, driving \nthrough the chain or belt drivetrain. \nGeared Hub Motor A hub motor containing an internal planetary gear reduction, \nallowing the motor's rotor to spin faster than the wheel for improved torque at \nlow speeds. \nDirect Drive Hub Motor A hub motor with no gear reduction; the motor's rotor IS \nthe wheel hub shell and spins at wheel speed. \nStator The stationary part of the motor containing wire coils (windings). In a hub \nmotor, the stator is the inner, axle-fixed component. \nRotor The rotating part of the motor containing permanent magnets. In an \noutrunner hub motor, the rotor is the outer shell. \nPermanent Magnet Magnets (typically neodymium NdFeB) fixed to the rotor that \ncreate the magnetic field. \nWinding / Coil Copper wire wound around stator teeth/poles to create \nelectromagnets when energized. \nPhase One of the (typically three) independent winding groups in a BLDC motor. \nLabeled A/B/C or U/V/W. \nCommutation The sequential switching of current through motor phases to \nproduce continuous rotation. \nHall Effect Sensor A semiconductor sensor that detects magnetic field polarity,"
+    },
+    "Ai_generated_ebike_motor_p0042_c02": {
+      "chunk_id": "Ai_generated_ebike_motor_p0042_c02",
+      "book": "Ai_generated_ebike_motor",
+      "page": 42,
+      "section": "28. COMMON BRANDS AND MODELS — E-BIKE MID-DRIVE MOTORS",
+      "has_visual_data": false,
+      "text": "rque) Geared rear hub, 500–750W, 48V (or mid-drive \npreferred) Bafang G062, MAC Motor \nFront hub conversion (light assist) Geared front hub, 250W, 36V Bafang FM G311 \nfront, Cute Q100 front \nFat tire e-bike Wide-format DD or geared hub, 500–1000W Bafang RM G070, \nMXUS 4000-series, Leafbike fat hub \n\n28. COMMON BRANDS AND MODELS — E-BIKE MID-DRIVE MOTORS \n28.1 OEM Mid-Drive Systems (Detailed) \nBosch:"
+    },
+    "Controller_Reference_p0001_c03": {
+      "chunk_id": "Controller_Reference_p0001_c03",
+      "book": "Controller_Reference",
+      "page": 1,
+      "section": "Chapter 1.2 — Controller Voltage Rating",
+      "has_visual_data": false,
+      "text": "The controller's voltage rating must match your battery voltage. Common voltages are 24V, 36V, 48V, 52V, 60V, and 72V. Some controllers support a voltage range (e.g., 36V/48V dual-voltage, selectable by DIP switch). Using a controller rated lower than your battery voltage will likely destroy the controller immediately — the higher voltage exceeds the controller's MOSFET ratings and causes immediate failure, potentially with fire risk. DANGER: Never connect a 36V controller to a 48V battery. Using a controller rated higher than your battery voltage will result in reduced power output and may cause error codes on the display."
+    },
+    "Controller_Reference_p0006_c00": {
+      "chunk_id": "Controller_Reference_p0006_c00",
+      "book": "Controller_Reference",
+      "page": 6,
+      "section": "Chapter 6.1 — How Battery BMS Affects Controller Operation",
+      "has_visual_data": false,
+      "text": "The BMS (Battery Management System) is a circuit board inside the battery pack that protects cells from overcharge, over-discharge, overcurrent, and short circuit. The BMS sits between battery cells and controller. When BMS detects a dangerous condition, it disconnects battery output and the controller loses power instantly. Symptoms: Sudden power cutoff during hill climbing — high motor current exceeds BMS overcurrent threshold. Power cuts out then comes back a few seconds later — BMS trips, voltage recovers under no load, BMS reconnects, rider accelerates, BMS trips again. This on-off cycling is classic BMS overcurrent. System shuts down at 30-40% battery shown on display — one or more cells are weaker, the weak cell hits low-voltage cutoff before rest of pack. Battery charges to full but range is dramatically reduced — cell imbalance causes BMS to cut off early during discharge."
+    },
+    "Controller_Reference_p0006_c01": {
+      "chunk_id": "Controller_Reference_p0006_c01",
+      "book": "Controller_Reference",
+      "page": 6,
+      "section": "Chapter 6.2 — BMS Current Rating vs Controller Current",
+      "has_visual_data": false,
+      "text": "The most common BMS-controller interaction problem is current mismatch. If controller can draw more current than BMS allows, BMS will repeatedly cut power under load. Examples: BMS 15A with 15A controller = OK but may trip on very steep hills due to current spikes. BMS 20A with 30A controller = PROBLEM, controller draws 30A under load but BMS cuts at 20A, motor cuts out during hard acceleration and hill climbing. BMS 30A with 25A controller = GOOD, BMS has headroom. BMS 40A with 30A controller = OPTIMAL, plenty of headroom for spikes. Solutions: Reduce controller current via display C05 parameter on KT controllers or DIP switches. Replace BMS with higher continuous current rating (BMS boards available $5-30). Upgrade entire battery. Reduce demand through proper tire inflation, lighter loads, moderate acceleration."
+    },
+    "big_blue_book_p0024_c00": {
+      "chunk_id": "big_blue_book_p0024_c00",
+      "book": "big_blue_book",
+      "page": 24,
+      "section": "",
+      "has_visual_data": false,
+      "text": "Bottom Bracket Bearing Service for Threaded Shells\nThreaded External Bearing Bottom Brackets for Two-Piece\nCranks\nThreaded Cartridge Bottom Brackets for Three-Piece Cranks\nThreaded Adjustable Bottom Bracket Bearings\nBottom Bracket Removal\nBottom Bracket Installation\nBottom Bracket Adjustment"
+    },
+    "big_blue_book_p0051_c00": {
+      "chunk_id": "big_blue_book_p0051_c00",
+      "book": "big_blue_book",
+      "page": 51,
+      "section": "CHAPTER 16 — HEADSETS",
+      "has_visual_data": false,
+      "text": "CHAPTER 16 — HEADSETS\nHeadset Types\nHeadset Service\nThreadless Headset Service\nThreadless Headset Adjustment\nThreaded Headset Service\nThreaded Headset Adjustment"
+    },
+    "big_blue_book_p0052_c00": {
+      "chunk_id": "big_blue_book_p0052_c00",
+      "book": "big_blue_book",
+      "page": 52,
+      "section": "",
+      "has_visual_data": false,
+      "text": "Headset Replacement & Installation\nHeadset Stack Height\nPressed Headset Removal\nPressed Headset Installation\nFork Crown Race Installation"
+    },
+    "big_blue_book_p0200_c00": {
+      "chunk_id": "big_blue_book_p0200_c00",
+      "book": "big_blue_book",
+      "page": 200,
+      "section": "",
+      "has_visual_data": true,
+      "text": "removable lockring at the outer end of the freehub. Instead, a lockring is\nintegrated into the cassette body and is turned by the tool fitting at the small\nend of the cassette (figure 3.8). SRAM® XD™ and XDR™ compatible\ncassettes use the Park Tool FR-5 series of lockring tools.\nFIGURE 3.8: SRAM® XX1® cassette with special freehub body\nTo install the SRAM® cassette place cassette onto the freehub body and\nengage splines of cassette with splines of freehub. Splines are symmetrical\nand any orientation will work. Use the lockring tool to thread the system\nlockring to the freehub. Secure fully to recommend torque as any other type\nof cassette stack.\nRemoval of SRAM® XD™ and XDR™ compatible cassettes is the same\nas other systems. Use a chain whip to hold the cassette stack and to keep it\nfrom turning counterclockwise (figure 3.9). Engage a lockring tool into the\nlockring tool fittings and turn counterclockwise until the threads are\ndisengaged. Pull cassette from freehub.\n\n\n[VISUAL DATA]: Alright, here’s the breakdown.\n\n**Overall Assembly:**\n\n*   The image depicts a bicycle wheel with a multi-gear cassette being installed or positioned near the freehub body. The cassette has multiple cogs of varying sizes, indicating a wide gear range drivetrain.\n\n**Cassette Details:**\n\n*   **Cog Design:** The cassette cogs feature extensive cutouts and profiling, indicating a focus on weight reduction and optimized shifting performance. The structure is complex.\n*   **Material:** The cogs appear to be constructed from a combination of materials, potentially aluminum and steel."
+    },
+    "big_blue_book_p0219_c01": {
+      "chunk_id": "big_blue_book_p0219_c01",
+      "book": "big_blue_book",
+      "page": 219,
+      "section": "",
+      "has_visual_data": false,
+      "text": "*   9mm Axle, N/A Speeds, 100mm Hub Width: Common bikes\n    *   10mm Axle, 1 Speed, 110mm Hub Width: Older track bike, coaster hub\n    *   10mm Axle, 5 or 1 (Track), 120mm Hub Width: Older road bikes and track bikes\n    *   10mm Axle, 6-7 Speeds, 126mm Hub Width: Older road bikes\n    *   10mm Axle, 8-12 Speeds, 130mm Hub Width: Modern road bikes, hybrids\n    *   10mm Axle, 6-12 Speeds, 135mm Hub Width: MTB internal gear hubs, road disc brake hubs\n\n*   **Rear:**\n\n    *   10mm Axle, 9-12 Speeds, 140mm Hub Width: Tandem\n    *   10mm Axle, 9-12 Speeds, 145mm Hub Width: Tandem\n    *   10mm Axle, 10-12 Speeds, 148mm Hub Width: Rear \"Boost\" standard\n    *   10mm Axle, 10-12 Speeds, 160mm Hub Width: Tandem\n    *   10mm Axle, 10-12 Speeds, 170mm Hub Width: Fat tire rear open\n    *   10mm Axle, 10-12 Speeds, 185mm Hub Width: MTB fat tire\n    *   10mm Axle, 10-12 Speeds, 190mm Hub Width: MTB fat tire open dropout\n\n**Table Data (Thru Axle):**\n\n*   **Front:**\n\n    *   12mm Thru Axle, N/A Speeds, 100mm Hub Width: Cyclocross and road\n    *   15mm Thru Axle, N/A Speeds, 100mm Hub Width: Suspension XC forks\n    *   20mm Thru Axle, N/A Speeds, 110mm Hub Width: Suspension DH forks\n    *   15mm Thru Axle, N/A Speeds, 135mm Hub Width: MTB fat tire thru axle\n    *   15mm Thru Axle, N/A Speeds, 142mm Hub Width: Fork\n    *   15mm Thru Axle, N/A Speeds, 150mm Hub Width: Fork, MTB fat tire\n\n*   **Rear:**"
+    },
+    "big_blue_book_p0219_c02": {
+      "chunk_id": "big_blue_book_p0219_c02",
+      "book": "big_blue_book",
+      "page": 219,
+      "section": "",
+      "has_visual_data": false,
+      "text": "*   12mm Thru Axle, 9 Speeds, 135mm Hub Width: Older rear MTB thru axles\n    *   12mm Thru Axle, 9-12 Speeds, 142mm Hub Width: Thru axle\n    *   12mm Thru Axle, 10-12 Speeds, 148mm Hub Width: Rear \"Boost\" standard\n    *   12mm Thru Axle, 8-9 Speeds, 150mm Hub Width: Older downhill standard\n    *   12mm Thru Axle, 10-12 Speeds, 157mm Hub Width: MTB \"Super Boost Plus\"\n    *   12mm Thru Axle, 10-12 Speeds, 160mm Hub Width: MTB\n    *   12mm Thru Axle, 10-12 Speeds, 177mm Hub Width: MTB fat tire thru axle\n    *   12mm Thru Axle, 10-12 Speeds, 197mm Hub Width: MTB fat tire\n\n**Key Considerations:**\n\n*   The \"Number of Speeds\" column provides a *range*, indicating the general compatibility. Exact cassette/freehub body compatibility should be confirmed separately.\n*   This is a *guide*, not an exhaustive list. Frame and fork manufacturers are ultimately responsible for specifying axle/hub compatibility.\n*   \"Boost,\" \"Super Boost Plus,\" and \"DH\" designate established industry standards. Refer to relevant documentation for detailed specifications.\n\n**Disclaimer:** This documentation doesn't include specifications for bearing preload, axle thread pitch, or recommended lubrication. Those should be obtained from manufacturer service manuals. No torque specifications are provided."
+    },
+    "big_blue_book_p0238_c00": {
+      "chunk_id": "big_blue_book_p0238_c00",
+      "book": "big_blue_book",
+      "page": 238,
+      "section": "FREEHUB REMOVAL & INSTALLATION",
+      "has_visual_data": false,
+      "text": "FREEHUB REMOVAL & INSTALLATION\nHubs designed with a freehub contain a ratcheting mechanism to allow\ncassette freewheeling. Depending upon the brand and model, the freehub\nmay contain internal parts that eventually wear out or may need lubrication.\nThere are typically no serviceable parts inside most freehubs. Freehubs may\nbe removed on many models for cleaning and relubrication. If this service\ndid not help or solve the freehub problem, the freehub should be replaced as\na complete unit.\nRemoval of freehubs is not a normal part of hub overhaul. Removal\nprocedures vary between hub model and brand. For freehub removal\nprocedures see the repair help section at www.parktool.com."
+    },
+    "big_blue_book_p0244_c01": {
+      "chunk_id": "big_blue_book_p0244_c01",
+      "book": "big_blue_book",
+      "page": 244,
+      "section": "",
+      "has_visual_data": false,
+      "text": "-cross lacing pattern.\n*   **Rim:** A portion of a rim is visible with a \"DT SWISS\" logo. The specific model or dimensions are not discernible.\n\n**Cassette Body Details:**\n\n*   **Type:** The cassette body is clearly labeled as \"XDR COMPATIBLE ONLY,\" indicating compatibility with SRAM XDR cassettes.\n\n*   **Material:** The cassette body appears to be a combination of black anodized aluminum and steel. The steel portion houses the bearing races.\n*   **Interface:** The image shows the spline interface between the hub body and the cassette body. The splines appear clean and undamaged.\n\n*   **Bearing:** The cassette body contains a bearing (visually identified with dimensions approximately 15mm ID x 28mm OD), with a stainless steel race.\n\n**Procedure Depiction:**\n\n*   **Cassette Body Installation:** The cassette body is being installed onto the hub body. The hand is gripping the cassette body to engage the splines.\n\n**Measurements (Estimates based on Proportions):**\n\n\n*   **Hub Flange Diameter:** Approximately 55-65 mm.\n*   **Cassette Body Length (overall):** Approximately 60-70 mm.\n*   **Hub Axle Diameter:** Unmeasurable.\n*    **Spoke diameter:** Unmeasurable\n\n**Tools and Equipment:**\n\n*   **No tools are visible**\n\n**Torque Values:**\n\n*   **No torque values are directly visible**. Refer to SRAM technical documentation for the appropriate torque specification for cassette lockring installation on an XDR compatible hub.\n\n**Part Numbers:**\n\n*   **Part numbers are not visually identifiable**.\n\n**Connector Pinouts:**"
+    },
+    "big_blue_book_p0250_c00": {
+      "chunk_id": "big_blue_book_p0250_c00",
+      "book": "big_blue_book",
+      "page": 250,
+      "section": "FREEHUB BEARINGS",
+      "has_visual_data": false,
+      "text": "FREEHUB BEARINGS\nThe hub design may include cartridge bearings inside the freehub. These\ncan be difficult to remove. If the freehub bearings turn smoothly, simply\nleave them in place as they are. If the bearings are worn out, begin by\nfinding a way to hold the freehub body. Freehub bodies can be aluminum, so\nwork with care to avoid damage. Hold the body, for example, as you would a\nbike seat post in the clamp of a repair stand, grabbing the outside in the\nradius jaws.\nAs with the hub, you can use a punch and hammer from the backside of\nthe bearing to tap it out. Tap first on one side, then again on the opposite\nside. Repeat tapping back and forth as it walks out. The second bearing can\nbe driven out using a drift from the backside. Reinstall new cartridge\nbearings by pressing them in evenly into the freehub body."
+    },
+    "big_blue_book_p0253_c01": {
+      "chunk_id": "big_blue_book_p0253_c01",
+      "book": "big_blue_book",
+      "page": 253,
+      "section": "",
+      "has_visual_data": false,
+      "text": "*   **Flange Configuration:** Likely 28 or 32 hole, based on spoke count.\n\n    *   **Thru-Axle Diameter:**  Presumed to be 12mm or 15mm based on modern disc brake standards (cannot be definitively determined from image).\n    *   **Spoke Hole Diameter:** Estimated 2.5mm, standard for bicycle spokes.\n\n    *   **Flange Diameter:** Not directly measurable.\n    *   **Bolt Circle Diameter (BCD):** Not directly measurable, assumed to be standard Shimano or similar disc brake rotor mount.\n\n2.  **Freehub Body:**\n    *   **Type:** XDR (XD Road) Compatible\n    *   **Markings:**  Visible \"XDR\" logo with \"COMPATIBLE ONLY\" marking below.\n    *   **Color:** Black anodized finish.\n    *   **Engagement Type:**  Likely ratchet-based or pawl-based (internal details not visible).\n    *   **Cassette Interface:**  Designed for SRAM XDR cassettes.\n\n    *   **Freehub Body Length (Exposed):** Estimated 40mm.\n    *   **External Diameter:** Approx. 35mm at the bearing interface.\n    *   **Bearing Type:** Cartridge bearing visible at the end of the freehub body. Bearing size is indeterminate.\n\n3.  **Wheel Spokes:**\n    *   **Type:**  Standard J-bend spokes.\n    *   **Material:** Stainless steel.\n    *   **Spoke Count:** Visually estimated at 28 or 32 spokes.\n\n    *   **Spoke Gauge:** Standard 14 gauge (2.0mm diameter).\n    *   **Spoke Pattern:** Likely a 2x or 3x lacing pattern (cannot be definitively determined).\n\n**Tools & Procedures:**\n\n1.  **Procedure:** Removal of XDR freehub body."
+    },
+    "big_blue_book_p0537_c02": {
+      "chunk_id": "big_blue_book_p0537_c02",
+      "book": "big_blue_book",
+      "page": 537,
+      "section": "",
+      "has_visual_data": false,
+      "text": "le in this diagram. This is a purely mechanical system.\n\n**Important Considerations:**\n\n*   **Chainline:** Verify the chainline is correct for the bicycle's drivetrain. Incorrect chainline can cause shifting problems.\n*   **Cage Alignment:** Ensure the derailleur cage is parallel to the chainrings.\n\n*   **Cable Tension:** Proper cable tension is critical for accurate shifting. Adjust tension using the barrel adjuster on the shifter or derailleur.\n*   **Limit Screws:** Adjust the high and low limit screws to prevent the chain from derailing off the inner or outer chainrings.\n*   **Lubrication:** Keep pivot points and cable clean and lubricated for smooth operation.\n\n**Disclaimer:** This analysis is based solely on visual information. Actual measurements, part numbers, and torque specifications may vary depending on the specific make and model of the derailleur. Always consult the manufacturer's service manual for precise instructions and specifications.\nI hope this helps."
+    },
+    "big_blue_book_p0585_c00": {
+      "chunk_id": "big_blue_book_p0585_c00",
+      "book": "big_blue_book",
+      "page": 585,
+      "section": "CHAINLINE",
+      "has_visual_data": true,
+      "text": "CHAINLINE\nChainline is the relation of the front and rear sprockets to the center plane\nof the bicycle (figure 10.67). The bike center plane is an imaginary plane\nrunning from front to rear through the middle of the bike. As an example, a\nfront crankset and/or front derailleur might be designed to have a chainline\nof 50mm. The front derailleur would then work best when the middle of the\nchainrings are 50mm from the bike centerline.\nFIGURE 10.67: Chainline in relationship to the bike mid plane: \n(A) distance from middle of front chainrings to mid plane, (B)\ndistance from middle of rear sprockets to mid plane\nChainline can also refer to the relative position of the front and rear\nsprockets to each other without regard to the bike centerline. This is called\n“effective chainline.” Effective chainline is simply the difference between\n“A” and “B,” but distance “A” is not always designed to be equal to “B.”\nFor example, with most three-chainring bikes, the middle of nine rear\n\n\n[VISUAL DATA]: Alright, here's a precise description for your consideration:\n\n**Diagram Description: Rear Triangle Alignment & Offset Check**\n\n**Overview:** This is a schematic diagram illustrating a visual inspection procedure for checking the alignment and offset of a bicycle's rear triangle in relation to the cassette cluster and chainring. It appears to represent a common step in diagnosing drivetrain performance issues. No specific manufacturer or model is identifiable.\n\n**Key Components Visible:**"
+    },
+    "big_blue_book_p0637_c00": {
+      "chunk_id": "big_blue_book_p0637_c00",
+      "book": "big_blue_book",
+      "page": 637,
+      "section": "REAR DERAILLEUR",
+      "has_visual_data": true,
+      "text": "REAR DERAILLEUR\nThe rear derailleur is installed like a conventional derailleur. The shift\nwire plugs into the body, and is held in by a pinch screw (figure 11.27).\nAlways loosen this screw before attempting to pull the plug.\nFIGURE 11.27: Rear wire plug pinch screw\n\n\n[VISUAL DATA]: Okay, here's a hyper-detailed description of the image, aiming for \"master mechanic\" level precision:\n\n**Overall Scene:**\n\n*   A close-up, moderately lit shot focusing on the rear derailleur area of a bicycle.\n*   Predominant colors are black (derailleur components), silver (cassette and chain), and flesh tones (hand).\n\n**Cassette and Chain:**\n\n*   **Cassette:** Multi-speed cassette on the rear wheel hub. Appears to be a typical Shimano or SRAM design.\n    *   Number of cogs are not visible\n    *   Tooth profiles and wear patterns not discernible due to image quality.\n    *   Spacers not visible\n*   **Chain:** Standard roller chain.\n\n    *   Pin-to-pin distance appears to be ~0.5 inch (12.7 mm).\n    *   Link wear and lubrication state not visible.\n    *   Chain is positioned on a smaller cog of the cassette.\n\n**Rear Derailleur:**\n\n*   **Type:** Electronic rear derailleur unit, identifiable by the actuator body and wiring.\n\n*   **Markings:**\n    *   \"FSA\" logo with lettering oriented horizontally. Font is sans-serif.\n    *   \"K-FORCE WE\" logo positioned with the \"WE\" oriented diagonally.\n\n*   **Mounting:**\n\n    *   Direct mount to the derailleur hanger via a single black bolt with visible flat head and hexagonal socket (likely 4mm or 5mm hex).\n    *   Mounting interface appears standard."
+    },
+    "big_blue_book_p0679_c00": {
+      "chunk_id": "big_blue_book_p0679_c00",
+      "book": "big_blue_book",
+      "page": 679,
+      "section": "DISC BRAKE ROTORS",
+      "has_visual_data": true,
+      "text": "DISC BRAKE ROTORS\nDisc brake compatible hubs are designed to hold and secure the rotor disc.\nThe common system uses six bolts on a flange built into the hub shell.\nRotor-mounting bolts are M5 threading and typically use a Torx® T-25 size\nwrench (figure 13.14). Secure rotor bolts to manufacturer’s torque\nspecifications. When mounting rotors look for rotational direction arrows\nindicating mounting orientation. If there is writing on one side of the rotor\nthat side will face outward toward the mechanic.\nFIGURE 13.14: Secure rotor bolts using T25 driver\nA “center-lock” hub is designed with splined fittings to accept rotors\nmade with a matching internal pattern. The rotor is held tight with a\nlockring. Some lockrings use the same tool fitting as cassette lockrings with\n12 internal notches. Use the Park Tool FR-5 series. It is common on thru\naxle hubs to see a larger lockring with 16 external notches (figure 13.15).\nUse the Park Tool BBT-9 or BBT-69.2.\n\n\n[VISUAL DATA]: Okay, here's the detailed breakdown of the image, fit for a master mechanic:\n\n**Component:** Bicycle Front Wheel Disc Brake Rotor Assembly\n\n**Image Description:** Close-up shot showing the front bicycle wheel assembly with a disc brake rotor being torqued using a torque wrench. The focus is on the disc rotor, hub, and fastener interface.\n\n**Parts Breakdown:**\n\n1.  **Disc Rotor:**\n\n    *   Material: Likely hardened stainless steel.\n    *   Design: Slotted and drilled for heat dissipation and weight reduction. Features a carrier bolted to the hub."
+    },
+    "big_blue_book_p0680_c02": {
+      "chunk_id": "big_blue_book_p0680_c02",
+      "book": "big_blue_book",
+      "page": 680,
+      "section": "",
+      "has_visual_data": false,
+      "text": ":**\n\n\n*   **Center Lock Ring:** 40 N·m (as indicated on the lock ring itself). Verify with service manual.\n\n**Observations:**\n\n*   The rotor appears to be a Shimano center lock style, mounted to a compatible hub.\n*   The Park Tool BBT-9 is engaged correctly with the splines of the center lock ring.\n\n*   The spokes appear to be a standard steel with 16x spokes on each side\n*   The person in the image is holding the Park Tool BBT-9 by the blue handle.\n\n**Assumptions (To Verify):**\n\n*   Hub axle type and dimensions are unknown.\n*   Verify the model number of the center lock ring.\n\n**Missing Information (Required for Complete Repair):**\n\n*   Full part number of the Shimano rotor.\n*   Part number of the Shimano center lock ring.\n*   Hub manufacturer and model number.\n*   Bicycle frame manufacturer and model number.\n\nLet me know if you need anything else analyzed!"
+    },
+    "big_blue_book_p0710_c00": {
+      "chunk_id": "big_blue_book_p0710_c00",
+      "book": "big_blue_book",
+      "page": 710,
+      "section": "HAYES® HYDRAULIC CALIPER BRAKES",
+      "has_visual_data": false,
+      "text": "HAYES® HYDRAULIC CALIPER BRAKES\nHayes® offers brakes in both mineral oil and hydraulic brakes using DOT\n3 or DOT 4 brake fluid. Never attempt to mix tools or fluids. These\nprocedures are written for models using DOT fluid. The brakes bleed from\ncaliper upward, and excess fluid exits at lever. Hayes® bleed kit includes\nbleed fittings for the lever, small pieces of plastic tubing, and a squeeze\nbottle. The bottle permits fluid to be pushed into the system, and then to be\nsucked back out. This system of pressure followed by a vacuum helps to\nclear the system of air. A syringe can be substituted, but it is necessary to\noccasionally pull back on the plunger to flush the system of air. It is\nnecessary to rig a bleed waste fluid collection bottle at the lever to catch\nDOT fluid."
+    },
+    "big_blue_book_p0728_c04": {
+      "chunk_id": "big_blue_book_p0728_c04",
+      "book": "big_blue_book",
+      "page": 728,
+      "section": "*   DOT FLUID, CAUSTIC MATERIAL. USE PROPER GLOVES.",
+      "has_visual_data": false,
+      "text": "lic brake systems require specialized knowledge and skill. If you are not qualified, seek the assistance of a professional mechanic.\n*   Torque specifications are NOT visible and must be referenced from a reliable source.\n*   The red clamp is not standardized, be careful when using any brake lines.\n\n*   DOT FLUID, CAUSTIC MATERIAL. USE PROPER GLOVES.\n\nThis detailed breakdown should be sufficient for a master mechanic to understand the scenario and perform the illustrated task safely and effectively."
+    },
+    "big_blue_book_p0731_c00": {
+      "chunk_id": "big_blue_book_p0731_c00",
+      "book": "big_blue_book",
+      "page": 731,
+      "section": "TEKTRO® HYDRAULIC BRAKES",
+      "has_visual_data": false,
+      "text": "TEKTRO® HYDRAULIC BRAKES\nTektro® offers several brake models and all share common bleeding\nprocedures. Tektro® uses a mineral oil as brake fluid. Never use a DOT fluid\nor syringes used for DOT fluid with this system. Tektro® bleed kits includes\na syringe to push fluid from caliper to lever. The fluid exits at a port screw at\nthe lever. Tektro® provides a hollow M6 threaded fitting on a hole for waste\nfluid to cleanly exit. Flexible tubing that is 3⁄16\" diameter can be substituted\nfor the threaded fitting, however, expect some spillage of fluid at the lever.\nThe caliper fitting uses 1⁄4\" tubing.\nWhile the system can be bled with brake pads in place, it is best to remove\npads to avoid any chance of contamination with brake fluid.\nProcedure to bleed Tektro® caliper brakes:\na. Hold bike in repair stand and rotate bike so there is an uphill path from\ncaliper body to lever. Remove wheel and remove brake pads from\ncaliper.\nb. Rotate brake lever so lever reservoir is parallel with ground (figure\n13.58). Use split below reservoir lid as a reference line when aligning.\nAligning level will put port screw at the highest point."
+    },
+    "big_blue_book_p0820_c00": {
+      "chunk_id": "big_blue_book_p0820_c00",
+      "book": "big_blue_book",
+      "page": 820,
+      "section": "QUILL STEMS",
+      "has_visual_data": true,
+      "text": "QUILL STEMS\nThe “quill” of quill stem refers to the vertical post that inserts inside of a\nthreaded steering column. A bolt draws up a wedge or cone which secures\nthe stem tightly inside the column. The stem binder bolt, bolt head, wedge,\nand outside of the quill should have a layer of grease or anti-seize before\ninstalling and tightening.\nQuill stems are available in different stem angles and stem lengths, like\nthreadless stems. Quill length is also specified for quill stems. The stem\nangle is measured from the quill to the extension (figure 15.12).\nFIGURE 15.12: Quill stem: (A) stem binder bolt, (B) stem wedge,\n(C) handlebar binder, (D) quill section of stem, (E) stem length, (F)\nstem angle\nIt is important that the stem’s quill diameter is a correct match for the\ninside diameter of the steering column. The quill should be slightly smaller\nthan the inside of the column. There are several different steering column\n\n\n[VISUAL DATA]: Understood. Here's a detailed description of the provided technical repair diagram, suitable for a master mechanic:\n\n**Overview**\n\nThis exploded diagram depicts the assembly of a quill-type bicycle stem. Key components include the quill bolt, wedge, stem body, and handlebar clamp bolt. Note that no specific manufacturer or model number is discernible from the image alone. I will assume that the diagram is in metric since bicycle parts are usually in metric.\n\n**Components**\n\n*   **A - Quill Bolt:**\n    *   Material: Likely hardened steel."
+    },
+    "big_blue_book_p0825_c00": {
+      "chunk_id": "big_blue_book_p0825_c00",
+      "book": "big_blue_book",
+      "page": 825,
+      "section": "",
+      "has_visual_data": true,
+      "text": "FIGURE 15.16: Threadless stem measurements: (A) stem length, (B)\nstem angle, (C) stem stack height\nThreadless stem height adjustability is limited by the number of extra\nspacers used along the steering column. To lower threadless stems, remove\nextra spacers that are below the stem and stack them above the stem. If, after\nlowering the stem, there is an excessive amount of steering column\nextending above the stem, the column may be cut and shortened. See the\nsection on threadless steering columns in Chapter 16—Headsets.\nTo raise a threadless stem, look for any spacers above the stem. Move\nthese to below the stem, leaving enough of a gap for the top cap to allow for\nheadset adjustment. Simply adding additional spacers below the current stem\nand column arrangement to raise bars may compromise stem-to-steering\ncolumn engagement and make the bike unsafe. The steering column must\nhave good contact with the inside of the threadless stem. However, the\nsteering column should be slightly recessed below the stem top (figure\n15.17).\n\n\n[VISUAL DATA]: Alright, let's dissect this FSA K-Force carbon stem diagram.\n\n**Overall Description:**\n\nThis is a partial engineering drawing for an FSA K-Force bicycle stem, likely a carbon fiber composite model. It shows a side profile view, with callouts for overall length, likely stack height, and a trajectory line.  Torque specifications are also visible for both the steerer tube and handlebar clamping bolts.\n\n**Dimensional Analysis:**"
+    },
+    "big_blue_book_p0861_c00": {
+      "chunk_id": "big_blue_book_p0861_c00",
+      "book": "big_blue_book",
+      "page": 861,
+      "section": "THREADLESS HEADSET ADJUSTMENT",
+      "has_visual_data": true,
+      "text": "THREADLESS HEADSET ADJUSTMENT\nThreadless headsets, including EC, ZS, and IS types, operate on the same\nprinciple and share adjustment procedures. Bearing races must press against\nthe bearings to remove play. The bolt in the top cap puts pressure on the\nstem. The stem presses on spacers below the stem and the spacers put\npressure on the bearing races and bearings (figure 16.16). Stem binder bolts\nthen secure the stem to the steering column to maintain the bearing\nadjustment and keep the stem in place and aligned.\nFIGURE 16.16: Threadless stem with (A) top cap, (B) adjusting bolt,\n(C) star nut in column\nIf not already inspected during assembly, remove the top cap to inspect\nthe star nut or compression plug inside steering column. No bearing\nadjustment can occur if the top cap is pressing on top of the steering column.\nAdd an additional spacer if the column is too long for the stem and spacer\ncombination.\n\n\n[VISUAL DATA]: Okay, here's a highly detailed breakdown of the headset compression assembly in the image, suitable for a master mechanic's analysis:\n\n**Overall System:**\n\nThe image depicts a threadless bicycle headset compression system, specifically a top cap arrangement for preload adjustment. The system is composed of a top cap, a threaded bolt, and an internal compression plug (or star nut). The fork steerer tube appears to be alloy based on the reflection and finish.\n\n**Component Breakdown:**\n\n*   **A - Top Cap (Partially Identified):**\n\n    *   Material: Appears to be black anodized aluminum alloy.\n    *   Shape: Low-profile, circular with slightly rounded edges."
+    },
+    "big_blue_book_p0861_c02": {
+      "chunk_id": "big_blue_book_p0861_c02",
+      "book": "big_blue_book",
+      "page": 861,
+      "section": "THREADLESS HEADSET ADJUSTMENT",
+      "has_visual_data": false,
+      "text": "*   Features:\n        *   Central bore to receive the compression bolt.\n        *   A retaining lip is visible where it contacts the inner surface of the steerer tube.\n\n    *   Outer Diameter (estimated): Sized to fit snuggly inside the steerer tube, approx. 28.6mm\n\n**Overall System Analysis:**\n\n\n1.  **Installation:** The bolt is threaded into the compression plug. The assembly then lowers into the top of the steerer tube.\n2.  **Preload Adjustment:** As the bolt is tightened, the compression plug expands inside the steerer tube, creating friction against the inner walls. This draws the steerer tube upwards relative to the frame, putting preload on the headset bearings.\n3.  **Torque:** Torque applied to the bolt is critical for preload. Over-tightening can damage the steerer tube. While the torque spec is not visible, it would be critical to check the FSA manual.\n4.  **Tooling:** A hex wrench (likely 4mm or 5mm) is required to tighten/loosen the compression bolt. The exact size depends on the fastener's head.\n\n**Notes/Cautions:**\n\n*   Always apply appropriate grease or anti-seize to the threads of the compression bolt to ensure smooth operation and prevent galling.\n*   When servicing, inspect the steerer tube's inner surface for any signs of damage or scoring.\n*   A carbon-fiber steerer tube requires special considerations. This diagram depicts an alloy steerer tube.\n\nLet me know if you want more details on a specific area or would like me to estimate any other dimensions based on the existing visual cues."
+    },
+    "big_blue_book_p0888_c00": {
+      "chunk_id": "big_blue_book_p0888_c00",
+      "book": "big_blue_book",
+      "page": 888,
+      "section": "",
+      "has_visual_data": true,
+      "text": "Continue until TNS-1 is fully seated (figure 16.34).\nFIGURE 16.34: Using a stem to help align TNS-1 and star nut\nThe TNS-4 Threadless Nut Setter uses a sleeved guiding system to drive\nthe star nut into the column. Thread star nut into tool and slide tool over the\ncolumn (figure 16.35). Use a hammer to drive down the mandrel until the\nstar nut is fully seated.\n\n\n[VISUAL DATA]: **Technical Repair Diagram Analysis**\n\n**Subject:** Bicycle Stem Removal from Steerer Tube\n\n**Components & Materials:**\n\n1.  **Steerer Tube:**\n    *   Material: Appears to be metallic, likely steel or aluminum alloy.\n\n    *   Diameter: Visually estimated at 28.6 mm (1 1/8 inch) steerer tube standard.\n    *   Finish: Anodized or painted silver finish.\n2.  **Bicycle Stem (Oval Concepts):**\n    *   Brand: \"OVAL\" logo visible. Specific model \"700\"\n    *   Material: Aluminum Alloy, likely 6061 or 7075 series.\n\n    *   Bolts: Four (4) visible stem clamp bolts. Thread likely M5 or M6. Finish: stainless steel, likely requiring a T-handle Allen wrench/hex key (4mm or 5mm size, depending on the specific bolt).\n    *   Estimated torque spec: 5-7 Nm (check manufacturer's specifications).\n    *   Stem Angle: Appears to be a +/- 6-degree or 17-degree rise stem.\n3.  **Stem Extender/Adaptor (Unknown Manufacturer):**\n    *   Material: likely steel or aluminum alloy.\n    *   Features: Extension section to increase height or allow for a different stem size.\n    *   Installation: Secured to steerer tube with a clamping mechanism.\n4.  **Dead Blow Hammer:**"
+    },
+    "big_blue_book_p0888_c02": {
+      "chunk_id": "big_blue_book_p0888_c02",
+      "book": "big_blue_book",
+      "page": 888,
+      "section": "",
+      "has_visual_data": false,
+      "text": "ments & Dimensions:**\n\n\n*   Steerer Tube Diameter: Est. 28.6 mm (1 1/8 inch).\n*   Stem Clamp Bolt Size: Likely M5 or M6. Verify size.\n\n**Torque Specifications:**\n\n\n*   Stem Clamp Bolts: Typically 5-7 Nm. Refer to stem manufacturer's specification printed on the stem body.\n\n**Warnings & Cautions:**\n\n\n1.  **Stem and Steerer Tube Compatibility:** Ensure correct diameter matching between the stem and steerer tube to prevent damage or failure.\n2.  **Clamp Bolt Torque:** Over-torquing can damage the stem or steerer tube. Under-torquing can result in slippage. Use a torque wrench to apply the correct torque value specified by the manufacturer.\n3.  **Controlled Force:** Avoid excessive force when striking with the dead blow hammer to prevent damage to the steerer tube, stem, or adaptor.\n4.  **Alignment:** Ensure components are properly aligned to avoid binding or cross-threading during installation or removal.\n\n**Notes:**\n   *   Use of penetrating oil or lubricant may aid in the removal process.\n   *   Always consult the manufacturer's specifications for the stem and steerer tube for proper installation and torque procedures.\n   *   Inspect all parts for damage before reassembly. Replace components as necessary.\n   *   The use of a rubber mallet might be preferred to the dead blow hammer to minimize potential for damage.\n\n**End of Description**"
+    },
+    "big_blue_book_p0921_c00": {
+      "chunk_id": "big_blue_book_p0921_c00",
+      "book": "big_blue_book",
+      "page": 921,
+      "section": "SHOCKS (REAR SHOCKS)",
+      "has_visual_data": false,
+      "text": "SHOCKS (REAR SHOCKS)\nThe term “shock” or “rear shock” is the rear suspension linkage damping\nmechanism. Like the damping systems in the front fork, the rear shock is\ndesigned to help control motion. Damping in rear suspension shocks can\noccur both on the compression cycle and extension cycles.\nRear shocks can use one of two return spring systems. The shock may\nhave a built-in container with pressurized air. As the bike hits a bump, the\nrear linkage moves upward making the shock stanchion move into the shock\nbody. This compresses an air chamber, which provides a push to extend back\nthe linkage after the load is passed.\nThe rear shock may also have a large external spring surrounding the\ndamper. These springs are typically available in different compressive\nstrengths. It is very unusual but these springs may fail.\nThe rear shock can develop wear at the bushing of the frame attachments.\nPlay is felt when the bike is lifted up and down. Test this by placing a foot\non the pedal and pulling upward at the top of the seat tube. If you feel play\nhere, it still may only be loose linkages, not a worn bushing. Perform a\ndouble-check of linkage bolt and shock mounting bolt tightness. If play is\nstill present, it is likely a worn bushing that requires replacement. There are\noften proprietary tools required and shock bushing replacement is best left to\na professional mechanic.\nThe shock stanchion also passes through a seal or bushing which may\ndevelop leakage at the seals. Inspect around base of stanchion as it enters the"
+    },
+    "bike_repair_manual_chris_p0002_c02": {
+      "chunk_id": "bike_repair_manual_chris_p0002_c02",
+      "book": "bike_repair_manual_chris",
+      "page": 2,
+      "section": "5.  If bottom bracket service is required, use appropriate BB tool to remove bearing cups. Note thread direction: Right side is usually reverse-threaded.",
+      "has_visual_data": false,
+      "text": "precise specifications.\n*   Chainring Bolts: 8-10 Nm (use Loctite 242).\n*   Front Derailleur Clamp Bolt: 5-7 Nm.\n\n**Procedure:**\n\n1.  Loosen crank arm bolts using hex wrench.\n2.  Install crank puller into crank arm threads.\n3.  Tighten crank puller to extract crank arm from bottom bracket spindle.\n\n4.  Repeat steps on opposite crank arm.\n5.  If bottom bracket service is required, use appropriate BB tool to remove bearing cups. Note thread direction: Right side is usually reverse-threaded.\n\n**Connector Pinouts:**\n\n*   No electrical connectors visible in image.\n\n**Measurements:**\n\n*   No precise measurements possible from this image. Frame tube diameters, crank arm lengths, chainring tooth counts require physical inspection.\n\n**Parts List (Estimated):**\n\n*   Chainring bolts (set of 5). Confirm size (M5 x length).\n*   Crank arm bolts (pair). Match thread pitch and length to existing bolts.\n*   Bottom bracket (if replacement necessary). Confirm shell width, threading (BSA or Italian), and spindle length based on original BB.\n\n**Warnings/Cautions:**\n\n*   Crank arm bolts must be properly tightened to prevent damage to the crank arms and bottom bracket spindle.\n*   Use Loctite 242 on chainring bolts and crank arm bolts.\n*   Adjust front derailleur after reassembly to ensure proper shifting.\n*   Inspect chain for wear and replace if necessary.\n*   Always consult the manufacturer's service manual for the most accurate information."
+    },
+    "bike_repair_manual_chris_p0035_c01": {
+      "chunk_id": "bike_repair_manual_chris_p0035_c01",
+      "book": "bike_repair_manual_chris",
+      "page": 35,
+      "section": "",
+      "has_visual_data": false,
+      "text": "ribute in fork\nFreehub body and freewheel for play (see pp.66–7)\nRear mech frame fixing bolt for play (see pp.54–5)\nCleats for wear (see pp.84–5)\nJockey wheels for wear (see pp.54–5)\nOil in hub gear, if equipped with oil port (see pp.58–9)\nGrease bearings in pedals (see pp.80–1)\nChain (see pp.64–5)\n\nInner and outer cables (see pp.46–9)\nSprockets on a heavily used bike (see pp.66–7)\nBearings in open-bearing hubs for wear (see pp.100–1)\nBearings and bearing surfaces in headsets for wear \n(see pp.90–3)\nGrease open-bearing hubs (see pp.100–1)\nGrease headsets (see pp.90–3)\nHandlebar tape and grips (see pp.94–7)\nGrease brake bosses (see pp.122–23)\nInner and outer cables (see pp.114–17)\nFork steerer for cracks, by removing the headset \n(see pp.90–3)\nFork oil (see pp.144–47)\nSeals on forks and shocks, as part of bi-annual service \nby qualified technician"
+    },
+    "bike_repair_manual_chris_p0066_c00": {
+      "chunk_id": "bike_repair_manual_chris_p0066_c00",
+      "book": "bike_repair_manual_chris",
+      "page": 66,
+      "section": "MAINTAINING YOUR TRANSMISSION • CHAIN, CASSETTE, AND CHAINSET",
+      "has_visual_data": false,
+      "text": "STEP LOCATOR\n\n\n\nMAINTAINING YOUR TRANSMISSION • CHAIN, CASSETTE, AND CHAINSET\nCassette and \nfreewheel \nThe cassette and freewheel allow the rear\nwheel to rotate while the pedals remain\nstationary. Their internal mechanisms – the\nfreehub body of a cassette and the block in \na freewheel – will eventually wear out and\nneed replacing. The sprockets on both can\nalso wear. These parts will also need to be\nremoved whenever you replace a broken\nspoke on the drive side of the rear wheel. \nThe tools for removing a freewheel and a\ncassette depend on the manufacturer of the\npart that is fitted to the bike. Usually, the\nmanufacturer’s name is stamped on the\ncomponent. However, if you are in any doubt\nabout which tool you need, take the wheel\nto the shop when buying a remover tool. \nRemoving a cassette\nRemoving a freewheel block\nRemove the quick-release skewer from\nthe rear wheel.\n• Insert the cassette remover into the teeth of\nthe lockring at the centre of the cassette. \n• Replace the quick-release skewer to secure the\ncassette remover.\n\nRemove the quick-release skewer and\ninsert the block remover into the teeth at\nthe block’s centre. \n• Lock the block remover in place by replacing\nthe quick-release skewer.\n\nToolbox\n\u0002 Spanners \u0002 Cassette remover \u0002 Chain whip \n\u0002 Block remover \u0002 Grease\nParts of a freewheel and a cassette\nSprockets\nInner side\nridges of\ncassette\nLockring\nSprocket\nFreewheel mechanism\nCassette\nFreewheel\n1 2 3"
+    },
+    "bike_repair_manual_chris_p0112_c03": {
+      "chunk_id": "bike_repair_manual_chris_p0112_c03",
+      "book": "bike_repair_manual_chris",
+      "page": 112,
+      "section": "V-BRAKE ANATOMY",
+      "has_visual_data": false,
+      "text": "nch or 27.5-inch wheel. Tire shows knobby tread pattern.\n    *   **B.3 Front Brake:** Hydraulic disc brake. Caliper mounting is a standard post-mount. Verify brake pad thickness.\n\n    *   **B.4 Rotor:** Diameter estimated at 160mm. Check rotor for trueness and damage.\n\n*   **C. Frame and Cockpit:**\n\n    *   **C.1 Top Tube:** Tube angle relative to horizontal (based on visual estimate) is approximately -5 to -10 degrees.\n    *   **C.2 Seat Post:** Standard cylindrical seat post. Verify clamp torque on inspection.\n    *   **C.3 Saddle:** Standard saddle configuration. Check saddle clamp bolts for tightness and positioning.\n\n*   **D. Drivetrain (Partial View):**\n    *   **D.1 Pedals:** Clipless pedals. Shoe-pedal interface needs inspection for wear.\n\n**III. Measurements (Estimates based on visual inspection):**\n\n*   Handlebar Width: 650mm +/- 50mm\n*   Stem Length: 80mm - 120mm\n*   Stanchion Diameter: 32mm (estimate)\n*   Rotor Diameter: 160mm (estimate)\n\n**IV. Critical Inspection Points (Based on Visuals):**\n\n1.  **Headset Play:** Check for play or binding in the headset bearings.\n2.  **Fork Seal Condition:** Inspect fork seals for leaks or damage.\n3.  **Brake Pad Thickness:** Measure brake pad thickness and replace as needed.\n4.  **Rotor Trueness:** Ensure rotors are not bent or warped.\n5.  **Tire Pressure:** Check and adjust tire pressure to the manufacturer's recommendation for the terrain.\n6.  **Handlebar and Stem Bolt Torque:** Verify torque specifications of handlebar clamp bolts, stem bolts, and headset top cap.\n\n**V. Safety Gear:**"
+    },
+    "xiaomi_ebike_escooter_p0001_c01": {
+      "chunk_id": "xiaomi_ebike_escooter_p0001_c01",
+      "book": "xiaomi_ebike_escooter",
+      "page": 1,
+      "section": "4. The following error codes can point to problems with the battery or charger:",
+      "has_visual_data": false,
+      "text": "of the error codes of the Xiaomi Electric Bike are as \nfollows: \n1. Error code 04096 means that the motor controller has no data to report, indicating bad \nwiring or a missing SN number; \n2. Error code 08192 means that the battery has no data to report, which suggests a \npotential battery problem; \n\n3. Error code 16384 means that there is wrong with the display sending, indicating an issue \nwith the display; \n4. The following error codes can point to problems with the battery or charger: \n(1). Error code 00256 means a charging high-temperature warning; \n(2). Error code 00512 means a charging low-temperature warning; \n(3). Error code 01024 means a discharge high-temperature alarm; \n(4). Error code 02048 means a discharge low-temperature warning;"
+    },
+    "xiaomi_ebike_escooter_p0001_c02": {
+      "chunk_id": "xiaomi_ebike_escooter_p0001_c02",
+      "book": "xiaomi_ebike_escooter",
+      "page": 1,
+      "section": "5. The following error codes suggest issues with the controller or motor:",
+      "has_visual_data": false,
+      "text": "roblems with the battery or charger: \n(1). Error code 00256 means a charging high-temperature warning; \n(2). Error code 00512 means a charging low-temperature warning; \n(3). Error code 01024 means a discharge high-temperature alarm; \n(4). Error code 02048 means a discharge low-temperature warning; \n\n5. The following error codes suggest issues with the controller or motor: \n(1). Error code 00016 means an undervoltage fault; \n(2). Error code 00032 means a stall fault; \n(3). Error code 00064 means a sensor failure; \n(4). Error code 00001 means a power tube failure; \n(5). Error code 00002 means an overcurrent fault; \n(6). Error code 00004 means an over-temperature fault; \n(7). Error code 00008 means a hall failure;"
+    },
+    "big_blue_book_p0663_c00": {
+      "chunk_id": "big_blue_book_p0663_c00",
+      "book": "big_blue_book",
+      "page": 663,
+      "section": "SYSTEMS",
+      "has_visual_data": true,
+      "text": "CALIPER DISC BRAKE\nSYSTEMS\nDisc brake bikes use a caliper mounted near the fork or frame dropout\nends, and a rotor disc mounted to the hub. Disc brakes can be designed into\nmost any bikes, including MTB bikes, road bikes, cyclocross bikes, hybrid\nbikes, E-bikes, three-wheeled bikes, BMX bikes, and recumbent bikes.\nHowever, if brake mounts were not originally fitted to the bike, disc brakes\ncannot be added on. Disc brakes can be effective in wet weather where mud,\ndirt, and water are a concern in braking.\nBrake pads are housed in the caliper and are forced against the rotor,\nwhich slows the bike by converting the bike speed into heat. Allow the rotor\nand caliper to cool before touching. The rotors are made of machined steel,\nand the edges can be sharp. Always stop the wheel before touching or\nworking on the calipers and rotors. Try your best not to touch the rotors, as\nyour fingers have oils on them and can add to their contamination.\n\n\n[VISUAL DATA]: Alright, let's break down this hydraulic disc brake setup.\n\n**General Overview:**\n\nThe image depicts a rear-mounted Shimano Ultegra hydraulic disc brake caliper, secured to the frame with what appears to be a direct post mount adapter. A metallic silver heat shield is visible outboard of the caliper, situated next to a disc rotor (not fully in view). A chain is partially visible in the upper left of the frame.\n\n**Components and Markings:**\n\n1.  **Caliper:**\n\n    *   **Manufacturer:** Shimano\n    *   **Model:** Ultegra (clearly labeled in white text on the caliper body)"
+    },
+    "big_blue_book_p0693_c00": {
+      "chunk_id": "big_blue_book_p0693_c00",
+      "book": "big_blue_book",
+      "page": 693,
+      "section": "",
+      "has_visual_data": false,
+      "text": "It is critical to use the correct type of fluid when servicing brake system.\nSome manufacturers specify proprietary mineral fluids, while others use\nvarious automotive DOT brake fluid. The DOT fluid and Mineral oils should\nnever be mixed. Using an incompatible fluid can cause seals to fail and\nresult in brake failure. Bleeding tools and syringes for mineral fluid should\nnever be used for DOT fluid and vice-versa.\nAutomotive fluids are DOT (Department of Transportation) approved and\nare generally polyglycol fluids. The DOT fluids have different ratings, such\nas 3, 4, 4.1 or 5 or 5.1. Contact brake manufacturer for specific\nrecommendation. DOT brake fluids are caustic and toxic. Work with care to\navoid fluid contact with the outside of lever or caliper, bike, and your skin.\nWhen available, use protective gloves, such as Park Tool MG-2 Mechanic\nGloves. During any work with hydraulic fluid, clean spills on the bike,\ncaliper, or lever with a rag and isopropyl alcohol, or soapy water. DOT\nhydraulic fluids can damage paint finish.\nThe procedures to service brake fluid system varies between\nmanufacturers. There may also be different techniques for the same model.\nIn all hydraulic brakes, the concept is to inject new fluid and remove any air\nbubbles inside the system.\nThere are usually three parts of a bleeding procedure. First is bleeding the\nbrake caliper body, followed by bleeding the hydraulic hose. Last is\nremoving any air from the brake lever. When in doubt, check with\nmanufacturers for their service recommendations."
+    },
+    "bike_repair_manual_chris_p0088_c00": {
+      "chunk_id": "bike_repair_manual_chris_p0088_c00",
+      "book": "bike_repair_manual_chris",
+      "page": 88,
+      "section": "HEADSETS",
+      "has_visual_data": false,
+      "text": "STEERING AND WHEELS • HEADSETS\nHEADSETS\nA headset allows the bike to be steered. The headset must\nbe properly adjusted to allow smooth, safe steering and\nto prolong its life. The bearings and bearing surfaces\nneed regular inspection and lubrication and anything\nthat is worn must be replaced at once. \nHow they work\nThe main function of the headset is to enable the rider \nto change the direction of the front wheel under any\nconditions. There are two types of headset, threaded \nand threadless, and both hold the front fork securely \nin the head tube, while simultaneously allowing the \nfork to turn freely. \nThe headset rotates on bearings, which are held in\nplace by cups, one above the head tube, the other below.\nFor the forks to turn freely, these two cups press on the\nbearings just enough to prevent any play in the part of\nthe fork known as the steerer tube. The way this pressure\n(also known as load) is achieved varies between the\nthreaded and threadless headsets."
+    },
+    "bike_repair_manual_chris_p0089_c00": {
+      "chunk_id": "bike_repair_manual_chris_p0089_c00",
+      "book": "bike_repair_manual_chris",
+      "page": 89,
+      "section": "",
+      "has_visual_data": false,
+      "text": "Steering effectively\nA headset allows the rider to\nsteer the front wheel effectively\nand confidently. The handlebar,\nwhich is connected to the \nsteerer tube by the stem, turns\nthe fork and the front wheel.\nScrewing the top cup down the thread of the steerer\nplaces a load on the top bearings to the point where\nthe forks turn freely but without play. The cup, and\nconsequently the front fork, is then locked in place\nby a lockring that also screws down the threaded\nsteerer. The stem is attached to the headset by\ntightening the stem’s expander bolt, which pulls \nup a wedge and jams the stem’s quill inside the\nthreaded steerer."
+    },
+    "bike_repair_manual_chris_p0071_c05": {
+      "chunk_id": "bike_repair_manual_chris_p0071_c05",
+      "book": "bike_repair_manual_chris",
+      "page": 71,
+      "section": "HOLLOW-AXLE BOTTOM BRACKET ANATOMY",
+      "has_visual_data": true,
+      "text": "l I tried to achieve, given the image's limitations. If you have any other requests for absurd technical documentation, I'm ready.\n\n\n[VISUAL DATA]: Okay, let's break down this \"technical repair diagram\" with extreme precision as if I were inspecting it in your service bay.\n\n**Overall Impression:**\n\n\nThe diagram appears to be a non-standard, abstract illustration of a mountain bike, specifically in an active, off-road, dynamic state of \"flight\" (presumably a jump). It's critical to understand there are no explicit torque values, part numbers, or connector pinouts shown. Therefore, any analysis would be based on indirect observations.\n\n**Frame and Suspension Analysis:**\n\n*   **Frame Material:** Undetermined. The material could be Aluminum Alloy. A careful tap test and visual inspection for welding beads/grain structure may give more clarity.\n\n\n*   **Fork Type:** A suspension fork is present, with a travel estimate of 100-120mm based on stanchion length relative to the lower legs. Check stanchions for scoring, indicating possible seal failure.\n\n*   **Shock Absorber:**A rear shock absorber is present.\n\n**Wheel and Brake System Analysis:**\n\n*   **Wheel Diameter:** Appears to be a standard 26-inch wheel diameter.\n\n*   **Rim Type:** Rims seem to be Aluminum Double wall alloy."
+    },
+    "bike_repair_manual_chris_p0148_c00": {
+      "chunk_id": "bike_repair_manual_chris_p0148_c00",
+      "book": "bike_repair_manual_chris",
+      "page": 148,
+      "section": "REAR SUSPENSION",
+      "has_visual_data": false,
+      "text": "TUNING YOUR SUSPENSION • REAR SUSPENSION\nREAR SUSPENSION\nThe rear suspension absorbs the shock caused by a bump in \nthe ground or rough terrain. A shock absorber must be kept\nclean and lubricated, and the bushings and frame mounts\nchecked regularly for damage and wear.\nHow it works\nThe shock absorber of the rear suspension\nmirrors the specifications of the front fork \nin order to increase the rider’s control of \nthe bike. The rear triangle of the frame,\nwhich connects the rear wheel to the shock\nabsorber, can move independently of the \nrest of the frame on bikes that are fitted\nwith rear suspension. \nShock absorbers, or shocks as they are also\nknown, consist of a spring medium, either a\ncoil or trapped air, and a shaft. The shaft is\nusually connected to a damping mechanism,\nwhich contains oil and controls the speed of\nthe shock absorber’s action. \nWhen the back wheel hits a bump on the road or\ntrail, the rear triangle moves up on its pivots,\ncompressing the spring, which absorbs the shock.\nAs the spring pushes back on the rear triangle of\nthe frame, the shock rebounds, pushing the rear\nwheel back ready for the next bump. \nWhen riding over smooth ground the rear shock\nabsorber is in a neutral position.\nWhen riding over rough ground the rear shock is in\na compressed position to absorb bumps."
+    },
+    "bike_repair_manual_chris_p0003_c00": {
+      "chunk_id": "bike_repair_manual_chris_p0003_c00",
+      "book": "bike_repair_manual_chris",
+      "page": 3,
+      "section": "C H R I S S I D W E L L S",
+      "has_visual_data": true,
+      "text": "BIKE\nREPAIR\nMANUAL\nC H R I S S I D W E L L S\n\n\n[VISUAL DATA]: Okay, here’s the breakdown of that bicycle repair image, keeping it strictly to the visible details:\n\n**General Overview:**\n\nThe image depicts a close-up of a bicycle's crankset area, specifically focusing on the removal/installation of the crank bolt. A hand is visible operating an Allen wrench inserted into the crank bolt recess.\n\n**Components Visible:**\n\n*   **Crankset:** Aluminum alloy construction, featuring a double chainring configuration.\n    *   **Large Chainring:**  Approximately 52-53 teeth, assuming a typical road bike setup.  The tooth profile appears standard, without any indications of narrow-wide designs for single-chainring use.\n    *   **Small Chainring:**  Approximately 39-40 teeth, with a similar tooth profile as the large chainring.\n\n    *   **Crank Arms:**  Five-arm design, with countersunk bolt holes for chainring attachment. Visually, the crank arm length cannot be accurately determined, but a standard road bike crankset typically falls within the 170mm - 175mm range.\n    *   **Crank Bolt:** Recessed Allen-head bolt. No visible part number. Appears to be a standard M8 or M10 thread.\n*   **Bottom Bracket:** The type of bottom bracket is obscured, but the exposed spindle indicates a square-taper design.\n*   **Chain:**  A standard 3/32\" or 11/128\" bicycle chain is present, running on the large chainring.  Roller pin spacing is the standard .5 inches.\n*   **Front Derailleur:**  Only the upper cage portion of the front derailleur is visible. The derailleur cage is chrome-plated.\n\n**Tools:**"
+    }
+  }
+}

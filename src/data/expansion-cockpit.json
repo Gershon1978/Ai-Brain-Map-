@@ -1,0 +1,393 @@
+{
+  "schema_version": "1.0.0",
+  "batch": "phase5-cockpit-2",
+  "nodes": [
+    {
+      "id": "comp-headset-threadless",
+      "type": "component",
+      "name": "Threadless Headset Assembly",
+      "subsystem": "sys-cockpit",
+      "aliases": ["Threadless Headset", "EC/ZS/IS Headset"],
+      "description": "Threadless headset system (EC, ZS, or IS) that operates on preload pressure from the top cap adjusting bolt to remove bearing play.",
+      "status": "verified",
+      "batch": "phase5-cockpit-2",
+      "properties": {
+        "headset_types": {
+          "key": "headset_types",
+          "name": "Threadless Headset Types",
+          "value": "EC, ZS, IS",
+          "status": "needs_review",
+          "note": "Operate on the same principle and share adjustment procedures"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0861_c00",
+          "book": "big_blue_book",
+          "page": 861,
+          "section": "THREADLESS HEADSET ADJUSTMENT",
+          "quote": "Threadless headsets, including EC, ZS, and IS types, operate on the same\nprinciple and share adjustment procedures.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-headset-top-cap",
+      "type": "subcomponent",
+      "name": "Threadless Top Cap and Adjusting Bolt",
+      "subsystem": "sys-cockpit",
+      "aliases": ["Top Cap", "Adjusting Cap", "Compression Top Cap"],
+      "description": "Cap and adjusting bolt assembly that puts downward pressure on the stem to adjust headset bearing preload.",
+      "status": "verified",
+      "batch": "phase5-cockpit-2",
+      "properties": {
+        "function": {
+          "key": "function",
+          "name": "Preload Pressure",
+          "value": "compresses stem onto spacers",
+          "status": "needs_review",
+          "note": "Puts pressure on stem to remove play"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0861_c00",
+          "book": "big_blue_book",
+          "page": 861,
+          "section": "THREADLESS HEADSET ADJUSTMENT",
+          "quote": "The bolt in the top cap puts pressure on the\nstem. The stem presses on spacers below the stem and the spacers put\npressure on the bearing races and bearings (figure 16.16).",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-stem-spacers",
+      "type": "subcomponent",
+      "name": "Threadless Stem Spacers",
+      "subsystem": "sys-cockpit",
+      "aliases": ["Headset Spacers", "Stem Spacers"],
+      "description": "Spacers placed along the steering column above or below the threadless stem to adjust handlebar height and set preload clearance.",
+      "status": "verified",
+      "batch": "phase5-cockpit-2",
+      "properties": {
+        "height_adjustment": {
+          "key": "height_adjustment",
+          "name": "Height Adjustment",
+          "value": "spacer position",
+          "status": "needs_review",
+          "note": "Adjustability limited by number of extra spacers"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0825_c00",
+          "book": "big_blue_book",
+          "page": 825,
+          "quote": "Threadless stem height adjustability is limited by the number of extra\nspacers used along the steering column.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-star-nut",
+      "type": "subcomponent",
+      "name": "Steering Column Star Nut",
+      "subsystem": "sys-cockpit",
+      "aliases": ["Star Fangled Nut", "Star Nut"],
+      "description": "Threaded internal anchor driven into the steering column to receive the top cap adjusting bolt.",
+      "status": "verified",
+      "batch": "phase5-cockpit-2",
+      "properties": {
+        "tooling": {
+          "key": "tooling",
+          "name": "Nut Setter Tool",
+          "value": "TNS-4",
+          "status": "needs_review",
+          "note": "Driven into column with nut setter"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0888_c00",
+          "book": "big_blue_book",
+          "page": 888,
+          "quote": "The TNS-4 Threadless Nut Setter uses a sleeved guiding system to drive\nthe star nut into the column.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "proc-threadless-headset-adj",
+      "type": "procedure",
+      "name": "Threadless Headset Bearing Preload Adjustment",
+      "subsystem": "sys-cockpit",
+      "aliases": ["Headset Preload Adjustment", "Bearing Play Removal"],
+      "description": "Procedure of applying compression to headset bearing races via the top cap adjusting bolt to remove bearing play before tightening stem binder bolts.",
+      "status": "verified",
+      "batch": "phase5-cockpit-2",
+      "properties": {
+        "bearing_preload": {
+          "key": "bearing_preload",
+          "name": "Bearing Preload Objective",
+          "value": "remove play",
+          "status": "needs_review",
+          "note": "Bearing races must press against bearings"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0861_c00",
+          "book": "big_blue_book",
+          "page": 861,
+          "section": "THREADLESS HEADSET ADJUSTMENT",
+          "quote": "Bearing races must press against\nthe bearings to remove play.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "std-steerer-dia-unconfirmed",
+      "type": "standard",
+      "name": "Steerer Tube Diameter (unconfirmed)",
+      "subsystem": "sys-cockpit",
+      "aliases": ["Estimated Steerer Diameter"],
+      "description": "Estimated 28.6 mm steerer tube diameter noted in visual repair diagram inspection.",
+      "status": "needs_review",
+      "batch": "phase5-cockpit-2",
+      "properties": {
+        "estimated_diameter": {
+          "key": "estimated_diameter",
+          "name": "Estimated Diameter",
+          "value": 28.6,
+          "unit": "mm",
+          "status": "needs_review",
+          "note": "Estimated in visual inspection"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0888_c02",
+          "book": "big_blue_book",
+          "page": 888,
+          "quote": "Steerer Tube Diameter: Est. 28.6 mm (1 1/8 inch).",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "id": "rule-stem-clamp-torque",
+      "type": "standard",
+      "name": "Stem Clamp Bolt Torque Specification (unconfirmed)",
+      "subsystem": "sys-cockpit",
+      "aliases": ["Stem Bolt Torque Estimate"],
+      "description": "Typical 5-7 Nm stem clamp bolt torque estimate from visual inspection, requiring verification with stem manufacturer specifications printed on stem body.",
+      "status": "needs_review",
+      "batch": "phase5-cockpit-2",
+      "properties": {
+        "estimated_torque": {
+          "key": "estimated_torque",
+          "name": "Estimated Torque",
+          "value": "5-7 Nm",
+          "status": "needs_review",
+          "note": "Refer to stem manufacturer specification"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0888_c02",
+          "book": "big_blue_book",
+          "page": 888,
+          "quote": "Stem Clamp Bolts: Typically 5-7 Nm. Refer to stem manufacturer's specification printed on the stem body.",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.85
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-threadless-headset-part-of-cockpit",
+      "src": "comp-headset-threadless",
+      "dst": "sys-cockpit",
+      "type": "part_of",
+      "claim": "Threadless headsets are categorized and serviced under the steering and cockpit headsets chapter.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-cockpit-2",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0051_c00",
+          "book": "big_blue_book",
+          "page": 51,
+          "section": "CHAPTER 16 — HEADSETS",
+          "quote": "CHAPTER 16 — HEADSETS\nHeadset Types\nHeadset Service\nThreadless Headset Service\nThreadless Headset Adjustment",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-top-cap-part-of-threadless",
+      "src": "comp-headset-top-cap",
+      "dst": "comp-headset-threadless",
+      "type": "part_of",
+      "claim": "The bolt in the top cap puts pressure on the stem to preload threadless headset bearings.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-cockpit-2",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0861_c00",
+          "book": "big_blue_book",
+          "page": 861,
+          "section": "THREADLESS HEADSET ADJUSTMENT",
+          "quote": "The bolt in the top cap puts pressure on the\nstem. The stem presses on spacers below the stem and the spacers put\npressure on the bearing races and bearings (figure 16.16).",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-spacers-mounted-on-steerer",
+      "src": "comp-stem-spacers",
+      "dst": "comp-steerer",
+      "type": "mounted_on",
+      "claim": "Threadless stem height adjustability is limited by spacers along the steering column.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-cockpit-2",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0825_c00",
+          "book": "big_blue_book",
+          "page": 825,
+          "quote": "Threadless stem height adjustability is limited by the number of extra\nspacers used along the steering column.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-star-nut-mounted-on-steerer",
+      "src": "comp-star-nut",
+      "dst": "comp-steerer",
+      "type": "mounted_on",
+      "claim": "Threadless nut setter tool drives the star nut into the steering column.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-cockpit-2",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0888_c00",
+          "book": "big_blue_book",
+          "page": 888,
+          "quote": "The TNS-4 Threadless Nut Setter uses a sleeved guiding system to drive\nthe star nut into the column.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-threadless-affects-adj-proc",
+      "src": "comp-headset-threadless",
+      "dst": "proc-threadless-headset-adj",
+      "type": "affects",
+      "claim": "Threadless headset bearing adjustment requires races to press against bearings to remove play.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-cockpit-2",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0861_c00",
+          "book": "big_blue_book",
+          "page": 861,
+          "section": "THREADLESS HEADSET ADJUSTMENT",
+          "quote": "Bearing races must press against\nthe bearings to remove play.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-steerer-conforms-to-dia",
+      "src": "comp-steerer",
+      "dst": "std-steerer-dia-unconfirmed",
+      "type": "conforms_to",
+      "claim": "Steerer tube diameter estimated at 28.6 mm from visual inspection.",
+      "status": "needs_review",
+      "evidence_type": "service_manual",
+      "confidence": 0.85,
+      "conditions": ["Requires physical verification with caliper"],
+      "conflicts": [],
+      "batch": "phase5-cockpit-2",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0888_c02",
+          "book": "big_blue_book",
+          "page": 888,
+          "quote": "Steerer Tube Diameter: Est. 28.6 mm (1 1/8 inch).",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "id": "edge-stem-conforms-to-torque",
+      "src": "comp-stem",
+      "dst": "rule-stem-clamp-torque",
+      "type": "conforms_to",
+      "claim": "Stem clamp bolts typically require 5-7 Nm tightening torque subject to manufacturer specification.",
+      "status": "needs_review",
+      "evidence_type": "service_manual",
+      "confidence": 0.85,
+      "conditions": ["Refer to stem manufacturer specification printed on stem body"],
+      "conflicts": [],
+      "batch": "phase5-cockpit-2",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0888_c02",
+          "book": "big_blue_book",
+          "page": 888,
+          "quote": "Stem Clamp Bolts: Typically 5-7 Nm. Refer to stem manufacturer's specification printed on the stem body.",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.85
+        }
+      ]
+    }
+  ]
+}

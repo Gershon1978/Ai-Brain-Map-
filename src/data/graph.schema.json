@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Hi5MechanicalGraphSchema",
+  "type": "object",
+  "required": ["schema_version", "nodes", "edges"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "name", "description", "properties", "status"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "type": {
+            "type": "string",
+            "enum": [
+              "vehicle",
+              "subsystem",
+              "component",
+              "subcomponent",
+              "property",
+              "measurement",
+              "standard",
+              "interface",
+              "material",
+              "tool",
+              "procedure",
+              "symptom",
+              "failure_mode",
+              "diagnostic_test",
+              "compatibility_rule",
+              "safety_constraint",
+              "error_code",
+              "manufacturer",
+              "product_model",
+              "evidence_source",
+              "unknown_requirement"
+            ]
+          },
+          "name": { "type": "string", "minLength": 1 },
+          "subsystem": { "type": "string" },
+          "aliases": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "description": { "type": "string" },
+          "properties": { "type": "object" },
+          "status": {
+            "type": "string",
+            "enum": ["candidate", "needs_review", "verified", "rejected", "conflicted", "superseded"]
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "src", "dst", "type", "claim", "evidence", "evidence_type", "status", "confidence", "conditions", "conflicts"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "src": { "type": "string", "minLength": 1 },
+          "dst": { "type": "string", "minLength": 1 },
+          "type": {
+            "type": "string",
+            "enum": [
+              "part_of",
+              "contains",
+              "connects_to",
+              "interfaces_with",
+              "fits_into",
+              "mounted_on",
+              "secured_by",
+              "retained_by",
+              "aligned_with",
+              "depends_on",
+              "requires",
+              "constrains",
+              "affects",
+              "controls",
+              "transmits_force_to",
+              "transmits_motion_to",
+              "transmits_torque_to",
+              "supplies_power_to",
+              "measured_by",
+              "has_property",
+              "conforms_to",
+              "compatible_with",
+              "conditionally_compatible_with",
+              "incompatible_with",
+              "excludes",
+              "requires_adapter",
+              "causes",
+              "may_cause",
+              "indicates",
+              "diagnosed_by",
+              "repaired_by",
+              "replaced_by",
+              "lubricated_with",
+              "tightened_to",
+              "adjusted_by",
+              "supported_by",
+              "contradicted_by",
+              "supersedes",
+              "unknown_due_to_missing_evidence"
+            ]
+          },
+          "claim": { "type": "string", "minLength": 1 },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["chunk_id", "book", "quote", "evidence_grade"],
+              "properties": {
+                "chunk_id": { "type": "string", "minLength": 1 },
+                "book": { "type": "string" },
+                "page": { "type": ["number", "string"] },
+                "quote": { "type": "string" },
+                "evidence_grade": {
+                  "type": "string",
+                  "enum": ["A", "B+", "B", "D"]
+                },
+                "linked_to_chunk": { "type": "boolean" },
+                "confidence": { "type": "number" }
+              }
+            }
+          },
+          "evidence_type": {
+            "type": "string",
+            "enum": [
+              "manufacturer_specification",
+              "service_manual",
+              "measured_observation",
+              "curated_rule",
+              "mechanical_principle",
+              "inference"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["candidate", "needs_review", "verified", "rejected", "conflicted", "superseded"]
+          },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+          "conditions": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "conflicts": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

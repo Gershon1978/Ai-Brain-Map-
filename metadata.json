@@ -1,0 +1,6 @@
+{
+  "name": "Hi5 Mechanical Knowledge Graph",
+  "description": "Visual, evidence-grounded mechanical knowledge graph and queryable reasoning system for bicycle components, standards, interfaces, and compatibility rules.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

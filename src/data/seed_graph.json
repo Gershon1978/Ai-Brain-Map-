@@ -1,0 +1,1309 @@
+{
+ "schema_version": "1.0.0",
+ "nodes": [
+  {
+   "id": "sys-drivetrain",
+   "type": "subsystem",
+   "name": "Drivetrain Subsystem",
+   "aliases": [
+    "Drivetrain",
+    "Transmission"
+   ],
+   "description": "Bicycle power transmission system including chain, cassette, chainset, derailleurs, and bottom bracket.",
+   "properties": {},
+   "status": "verified",
+   "evidence": []
+  },
+  {
+   "id": "sys-wheels",
+   "type": "subsystem",
+   "name": "Wheels & Tires Subsystem",
+   "aliases": [
+    "Wheelset",
+    "Wheels"
+   ],
+   "description": "Hubs, freehubs, axles, spokes, rims, and tire interfaces.",
+   "properties": {},
+   "status": "verified",
+   "evidence": []
+  },
+  {
+   "id": "sys-brakes",
+   "type": "subsystem",
+   "name": "Braking Subsystem",
+   "aliases": [
+    "Brakes"
+   ],
+   "description": "Hydraulic and mechanical braking assemblies, calipers, levers, rotors, and fluids.",
+   "properties": {},
+   "status": "verified",
+   "evidence": []
+  },
+  {
+   "id": "sys-cockpit",
+   "type": "subsystem",
+   "name": "Steering & Cockpit Subsystem",
+   "aliases": [
+    "Cockpit",
+    "Steering"
+   ],
+   "description": "Fork steerer, headset bearings, stem, and handlebars.",
+   "properties": {},
+   "status": "verified",
+   "evidence": []
+  },
+  {
+   "id": "comp-rear-hub",
+   "type": "component",
+   "name": "Rear Wheel Hub",
+   "subsystem": "sys-wheels",
+   "aliases": [
+    "Rear Hub Shell",
+    "Rear Hub"
+   ],
+   "description": "Central wheel component housing the axle and bearings, providing mounting for spokes, freehub body, and rotor.",
+   "properties": {
+    "over_locknut_dimension": {
+     "key": "over_locknut_dimension",
+     "name": "Over-Locknut Dimension (O.L.D.)",
+     "value": "135mm / 142mm",
+     "is_critical": true,
+     "status": "needs_review",
+     "note": "not cited to a chunk in kb.db; supervisor downgraded from verified"
+    }
+   },
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0238_c00",
+     "book": "big_blue_book",
+     "page": 238,
+     "section": "FREEHUB REMOVAL & INSTALLATION",
+     "quote": "FREEHUB REMOVAL & INSTALLATION Hubs designed with a freehub contain a ratcheting mechanism to allow cassette freewheeling.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "big_blue_book_p0250_c00",
+     "book": "big_blue_book",
+     "page": 250,
+     "section": "FREEHUB BEARINGS",
+     "quote": "FREEHUB BEARINGS The hub design may include cartridge bearings inside the freehub.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "comp-freehub-body",
+   "type": "subcomponent",
+   "name": "Freehub Body",
+   "subsystem": "sys-wheels",
+   "aliases": [
+    "HG Freehub",
+    "Cassette Body"
+   ],
+   "description": "Ratcheting cassette carrier mounted on the rear hub shell providing the splined mounting interface for rear cogs.",
+   "properties": {
+    "interface_type": {
+     "key": "interface_type",
+     "name": "Mounting Interface",
+     "value": "Splined Driver",
+     "is_critical": true,
+     "status": "needs_review",
+     "note": "not cited to a chunk in kb.db; supervisor downgraded from verified"
+    }
+   },
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0238_c00",
+     "book": "big_blue_book",
+     "page": 238,
+     "section": "FREEHUB REMOVAL & INSTALLATION",
+     "quote": "FREEHUB REMOVAL & INSTALLATION Hubs designed with a freehub contain a ratcheting mechanism to allow cassette freewheeling.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "big_blue_book_p0250_c00",
+     "book": "big_blue_book",
+     "page": 250,
+     "section": "FREEHUB BEARINGS",
+     "quote": "Freehub bodies can be aluminum, so work with care to avoid damage.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "comp-cassette",
+   "type": "component",
+   "name": "Rear Sprocket Cassette",
+   "subsystem": "sys-drivetrain",
+   "aliases": [
+    "Cassette",
+    "Rear Cog Cluster"
+   ],
+   "description": "Cluster of rear sprockets carried by the freehub body engaging its splines.",
+   "properties": {
+    "spline_engagement": {
+     "key": "spline_engagement",
+     "name": "Spline Engagement",
+     "value": "Keyed Master Spline",
+     "is_critical": true,
+     "status": "needs_review",
+     "note": "not cited to a chunk in kb.db; supervisor downgraded from verified"
+    }
+   },
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "bike_repair_manual_chris_p0066_c00",
+     "book": "bike_repair_manual_chris",
+     "page": 66,
+     "section": "MAINTAINING YOUR TRANSMISSION • CHAIN, CASSETTE, AND CHAINSET",
+     "quote": "STEP LOCATOR MAINTAINING YOUR TRANSMISSION • CHAIN, CASSETTE, AND CHAINSET Cassette and freewheel The cassette and freewheel allow the rear wheel to rotate while the pedals remain stationary.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "big_blue_book_p0200_c00",
+     "book": "big_blue_book",
+     "page": 200,
+     "section": "",
+     "quote": "Instead, a lockring is integrated into the cassette body and is turned by the tool fitting at the small end of the cassette (figure 3.8).",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "comp-freehub-xdr",
+   "type": "subcomponent",
+   "name": "SRAM XDR Driver Body",
+   "subsystem": "sys-wheels",
+   "aliases": [
+    "XDR Body",
+    "XD Road Driver"
+   ],
+   "description": "SRAM road driver body labeled 'XDR COMPATIBLE ONLY' accepting threaded XD/XDR cassettes exclusively.",
+   "properties": {
+    "marking": {
+     "key": "marking",
+     "name": "Engraved Marking",
+     "value": "XDR COMPATIBLE ONLY",
+     "is_critical": true,
+     "status": "needs_review",
+     "note": "not cited to a chunk in kb.db; supervisor downgraded from verified"
+    }
+   },
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0244_c01",
+     "book": "big_blue_book",
+     "page": 244,
+     "section": "",
+     "quote": "**Cassette Body Details:** * **Type:** The cassette body is clearly labeled as \"XDR COMPATIBLE ONLY,\" indicating compatibility with SRAM XDR cassettes.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "big_blue_book_p0253_c01",
+     "book": "big_blue_book",
+     "page": 253,
+     "section": "",
+     "quote": "**Freehub Body:** * **Type:** XDR (XD Road) Compatible * **Markings:** Visible \"XDR\" logo with \"COMPATIBLE ONLY\" marking below.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "comp-rotor-6bolt",
+   "type": "component",
+   "name": "6-Bolt Disc Brake Rotor",
+   "subsystem": "sys-brakes",
+   "aliases": [
+    "IS 6-Bolt Rotor",
+    "Standard Rotor"
+   ],
+   "description": "Brake rotor mounted using six T25 Torx bolts onto the hub shell flange.",
+   "properties": {
+    "mounting_pattern": {
+     "key": "mounting_pattern",
+     "name": "Mounting Standard",
+     "value": "IS 6-Bolt",
+     "is_critical": true,
+     "status": "needs_review",
+     "note": "not cited to a chunk in kb.db; supervisor downgraded from verified"
+    }
+   },
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0679_c00",
+     "book": "big_blue_book",
+     "page": 679,
+     "section": "DISC BRAKE ROTORS",
+     "quote": "The common system uses six bolts on a flange built into the hub shell.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "comp-hub-centerlock",
+   "type": "subcomponent",
+   "name": "CenterLock Hub Rotor Interface",
+   "subsystem": "sys-wheels",
+   "aliases": [
+    "Center Lock Flange",
+    "Splined Rotor Fitting"
+   ],
+   "description": "Splined rotor interface on the hub designed to accept matching internal splined rotors secured by a lockring.",
+   "properties": {
+    "spline_pattern": {
+     "key": "spline_pattern",
+     "name": "Interface Standard",
+     "value": "Center Lock Spline",
+     "is_critical": true,
+     "status": "needs_review",
+     "note": "not cited to a chunk in kb.db; supervisor downgraded from verified"
+    }
+   },
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0679_c00",
+     "book": "big_blue_book",
+     "page": 679,
+     "section": "DISC BRAKE ROTORS",
+     "quote": "FIGURE 13.14: Secure rotor bolts using T25 driver A “center-lock” hub is designed with splined fittings to accept rotors made with a matching internal pattern.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "big_blue_book_p0680_c02",
+     "book": "big_blue_book",
+     "page": 680,
+     "section": "",
+     "quote": ":** * **Center Lock Ring:** 40 N·m (as indicated on the lock ring itself).",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "comp-caliper-hydraulic",
+   "type": "component",
+   "name": "Hydraulic Brake Caliper",
+   "subsystem": "sys-brakes",
+   "aliases": [
+    "Disc Caliper",
+    "Hydraulic Caliper"
+   ],
+   "description": "Hydraulic slave cylinder assembly holding brake pads that clamp the rotor.",
+   "properties": {
+    "fluid_type": {
+     "key": "fluid_type",
+     "name": "Operating Fluid",
+     "value": "Manufacturer Specified (Mineral Oil or DOT)",
+     "is_critical": true,
+     "status": "needs_review",
+     "note": "not cited to a chunk in kb.db; supervisor downgraded from verified"
+    }
+   },
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0710_c00",
+     "book": "big_blue_book",
+     "page": 710,
+     "section": "HAYES® HYDRAULIC CALIPER BRAKES",
+     "quote": "HAYES® HYDRAULIC CALIPER BRAKES Hayes® offers brakes in both mineral oil and hydraulic brakes using DOT 3 or DOT 4 brake fluid.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "big_blue_book_p0731_c00",
+     "book": "big_blue_book",
+     "page": 731,
+     "section": "TEKTRO® HYDRAULIC BRAKES",
+     "quote": "TEKTRO® HYDRAULIC BRAKES Tektro® offers several brake models and all share common bleeding procedures.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "prop-fluid-dot",
+   "type": "property",
+   "name": "DOT Brake Fluid",
+   "subsystem": "sys-brakes",
+   "aliases": [
+    "DOT 3 / DOT 4 / DOT 5.1",
+    "Glycol Ether Fluid"
+   ],
+   "description": "Polyethylene glycol-based hydraulic brake fluid.",
+   "properties": {
+    "chemical_base": {
+     "key": "chemical_base",
+     "name": "Chemical Base",
+     "value": "Glycol Ether",
+     "is_critical": true,
+     "status": "needs_review",
+     "note": "not cited to a chunk in kb.db; supervisor downgraded from verified"
+    }
+   },
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0710_c00",
+     "book": "big_blue_book",
+     "page": 710,
+     "section": "HAYES® HYDRAULIC CALIPER BRAKES",
+     "quote": "HAYES® HYDRAULIC CALIPER BRAKES Hayes® offers brakes in both mineral oil and hydraulic brakes using DOT 3 or DOT 4 brake fluid.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "big_blue_book_p0728_c04",
+     "book": "big_blue_book",
+     "page": 728,
+     "section": "*   DOT FLUID, CAUSTIC MATERIAL. USE PROPER GLOVES.",
+     "quote": "* DOT FLUID, CAUSTIC MATERIAL.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "prop-fluid-mineral",
+   "type": "property",
+   "name": "Mineral Oil Brake Fluid",
+   "subsystem": "sys-brakes",
+   "aliases": [
+    "Hydraulic Mineral Oil"
+   ],
+   "description": "Hydrocarbon mineral oil hydraulic brake fluid.",
+   "properties": {
+    "chemical_base": {
+     "key": "chemical_base",
+     "name": "Chemical Base",
+     "value": "Mineral Oil",
+     "is_critical": true,
+     "status": "needs_review",
+     "note": "not cited to a chunk in kb.db; supervisor downgraded from verified"
+    }
+   },
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0731_c00",
+     "book": "big_blue_book",
+     "page": 731,
+     "section": "TEKTRO® HYDRAULIC BRAKES",
+     "quote": "Tektro® uses a mineral oil as brake fluid.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "comp-bb-threaded",
+   "type": "component",
+   "name": "Threaded Bottom Bracket",
+   "subsystem": "sys-drivetrain",
+   "aliases": [
+    "Threaded BB Cups",
+    "BSA Bottom Bracket"
+   ],
+   "description": "Threaded cups installed into the bottom bracket shell.",
+   "properties": {
+    "drive_side_thread": {
+     "key": "drive_side_thread",
+     "name": "Drive-Side Thread Direction",
+     "value": "Reverse-Threaded (Left-Hand)",
+     "is_critical": true,
+     "status": "needs_review",
+     "note": "not cited to a chunk in kb.db; supervisor downgraded from verified"
+    }
+   },
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0024_c00",
+     "book": "big_blue_book",
+     "page": 24,
+     "section": "",
+     "quote": "Bottom Bracket Bearing Service for Threaded Shells Threaded External Bearing Bottom Brackets for Two-Piece Cranks Threaded Cartridge Bottom Brackets for Three-Piece Cranks Threaded Adjustable Bottom Bracket Bearings Bottom Bracket Removal Bottom Bracket Instal",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "bike_repair_manual_chris_p0002_c02",
+     "book": "bike_repair_manual_chris",
+     "page": 2,
+     "section": "5.  If bottom bracket service is required, use appropriate BB tool to remove bearing cups. Note thread direction: Right ",
+     "quote": "Note thread direction: Right side is usually reverse-threaded.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "comp-headset",
+   "type": "component",
+   "name": "Steering Headset Assembly",
+   "subsystem": "sys-cockpit",
+   "aliases": [
+    "Headset Bearings",
+    "Headset"
+   ],
+   "description": "Bearing assembly enabling the fork steerer to rotate smoothly within the frame head tube.",
+   "properties": {
+    "bearing_system": {
+     "key": "bearing_system",
+     "name": "Bearing System",
+     "value": "Threadless / Threaded",
+     "is_critical": true,
+     "status": "needs_review",
+     "note": "not cited to a chunk in kb.db; supervisor downgraded from verified"
+    }
+   },
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0051_c00",
+     "book": "big_blue_book",
+     "page": 51,
+     "section": "CHAPTER 16 — HEADSETS",
+     "quote": "CHAPTER 16 — HEADSETS Headset Types Headset Service Threadless Headset Service Threadless Headset Adjustment Threaded Headset Service Threaded Headset Adjustment",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "big_blue_book_p0052_c00",
+     "book": "big_blue_book",
+     "page": 52,
+     "section": "",
+     "quote": "Headset Replacement & Installation Headset Stack Height Pressed Headset Removal Pressed Headset Installation Fork Crown Race Installation",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "comp-steerer",
+   "type": "subcomponent",
+   "name": "Fork Steerer Tube",
+   "subsystem": "sys-cockpit",
+   "aliases": [
+    "Steerer",
+    "Steering Column"
+   ],
+   "description": "Upper tube of the fork passing through the head tube on which headset bearings run and the stem clamps.",
+   "properties": {
+    "outer_diameter": {
+     "key": "outer_diameter",
+     "name": "Clamp Diameter",
+     "value": "28.6mm (1-1/8 in)",
+     "unit": "mm",
+     "is_critical": true,
+     "status": "needs_review",
+     "note": "not cited to a chunk in kb.db; supervisor downgraded from verified"
+    }
+   },
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0861_c02",
+     "book": "big_blue_book",
+     "page": 861,
+     "section": "THREADLESS HEADSET ADJUSTMENT",
+     "quote": "* A retaining lip is visible where it contacts the inner surface of the steerer tube.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "big_blue_book_p0888_c02",
+     "book": "big_blue_book",
+     "page": 888,
+     "section": "",
+     "quote": "ments & Dimensions:** * Steerer Tube Diameter: Est.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "comp-stem",
+   "type": "component",
+   "name": "Handlebar Stem",
+   "subsystem": "sys-cockpit",
+   "aliases": [
+    "Threadless Stem",
+    "Stem"
+   ],
+   "description": "Clamp component connecting the handlebars to the fork steerer tube.",
+   "properties": {
+    "clamp_type": {
+     "key": "clamp_type",
+     "name": "Clamp Style",
+     "value": "Threadless Steerer Clamp",
+     "is_critical": true,
+     "status": "needs_review",
+     "note": "not cited to a chunk in kb.db; supervisor downgraded from verified"
+    }
+   },
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0825_c00",
+     "book": "big_blue_book",
+     "page": 825,
+     "section": "",
+     "quote": "FIGURE 15.16: Threadless stem measurements: (A) stem length, (B) stem angle, (C) stem stack height Threadless stem height adjustability is limited by the number of extra spacers used along the steering column.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "big_blue_book_p0888_c02",
+     "book": "big_blue_book",
+     "page": 888,
+     "section": "",
+     "quote": "* Stem Clamp Bolt Size: Likely M5 or M6.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "comp-stem-quill",
+   "type": "component",
+   "name": "Quill Stem",
+   "subsystem": "sys-cockpit",
+   "aliases": [
+    "Wedge Stem",
+    "Threaded Stem"
+   ],
+   "description": "Stem with internal expander wedge used on threaded headset forks.",
+   "properties": {
+    "clamp_type": {
+     "key": "clamp_type",
+     "name": "Clamp Style",
+     "value": "Internal Expander Wedge",
+     "is_critical": true,
+     "status": "needs_review",
+     "note": "not cited to a chunk in kb.db; supervisor downgraded from verified"
+    }
+   },
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0820_c00",
+     "book": "big_blue_book",
+     "page": 820,
+     "section": "QUILL STEMS",
+     "quote": "QUILL STEMS The “quill” of quill stem refers to the vertical post that inserts inside of a threaded steering column.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "prop-chainline",
+   "type": "property",
+   "name": "Drivetrain Chainline",
+   "subsystem": "sys-drivetrain",
+   "aliases": [
+    "Chain Line",
+    "Chainline Distance"
+   ],
+   "description": "Relation of the front and rear sprockets to the center plane of the bicycle.",
+   "properties": {
+    "alignment_impact": {
+     "key": "alignment_impact",
+     "name": "Operational Impact",
+     "value": "Shifting Performance & Wear",
+     "is_critical": true,
+     "status": "needs_review",
+     "note": "not cited to a chunk in kb.db; supervisor downgraded from verified"
+    }
+   },
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0585_c00",
+     "book": "big_blue_book",
+     "page": 585,
+     "section": "CHAINLINE",
+     "quote": "CHAINLINE Chainline is the relation of the front and rear sprockets to the center plane of the bicycle (figure 10.67).",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "big_blue_book_p0537_c02",
+     "book": "big_blue_book",
+     "page": 537,
+     "section": "",
+     "quote": "Incorrect chainline can cause shifting problems.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "comp-rear-derailleur",
+   "type": "component",
+   "name": "Rear Derailleur",
+   "subsystem": "sys-drivetrain",
+   "aliases": [
+    "Rear Mech"
+   ],
+   "description": "Parallelogram mechanism shifting the chain across rear cassette sprockets.",
+   "properties": {},
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0637_c00",
+     "book": "big_blue_book",
+     "page": 637,
+     "section": "REAR DERAILLEUR",
+     "quote": "REAR DERAILLEUR The rear derailleur is installed like a conventional derailleur.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "comp-rear-shock",
+   "type": "component",
+   "name": "Rear Suspension Shock",
+   "subsystem": "sys-wheels",
+   "aliases": [
+    "Rear Shock",
+    "Damper"
+   ],
+   "description": "Air or coil spring and damping unit providing rear wheel suspension travel.",
+   "properties": {},
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0921_c00",
+     "book": "big_blue_book",
+     "page": 921,
+     "section": "SHOCKS (REAR SHOCKS)",
+     "quote": "SHOCKS (REAR SHOCKS) The term “shock” or “rear shock” is the rear suspension linkage damping mechanism.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "comp-fork-seals",
+   "type": "subcomponent",
+   "name": "Suspension Fork Wiper Seals",
+   "subsystem": "sys-cockpit",
+   "aliases": [
+    "Dust Wipers",
+    "Fork Seals"
+   ],
+   "description": "Elastomer seals preventing contaminant ingress into fork lower legs.",
+   "properties": {},
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "bike_repair_manual_chris_p0035_c01",
+     "book": "bike_repair_manual_chris",
+     "page": 35,
+     "section": "",
+     "quote": "ribute in fork Freehub body and freewheel for play (see pp.66–7) Rear mech frame fixing bolt for play (see pp.54–5) Cleats for wear (see pp.84–5) Jockey wheels for wear (see pp.54–5) Oil in hub gear, if equipped with oil port (see pp.58–9) Grease bearings in p",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "bike_repair_manual_chris_p0112_c03",
+     "book": "bike_repair_manual_chris",
+     "page": 112,
+     "section": "V-BRAKE ANATOMY",
+     "quote": "**Fork Seal Condition:** Inspect fork seals for leaks or damage.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "std-hub-width",
+   "type": "standard",
+   "name": "Hub Width & Axle Standard",
+   "subsystem": "sys-wheels",
+   "aliases": [
+    "Dropout Spacing Standard",
+    "O.L.D. Standard Table"
+   ],
+   "description": "Standardized rear dropout spacing guide (e.g. 100, 110, 120, 126, 130, 135, 142mm).",
+   "properties": {
+    "status_note": {
+     "key": "status_note",
+     "name": "Specification Scope",
+     "value": "Guide, not exhaustive list",
+     "is_critical": true,
+     "status": "needs_review",
+     "note": "not cited to a chunk in kb.db; supervisor downgraded from verified"
+    }
+   },
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0219_c01",
+     "book": "big_blue_book",
+     "page": 219,
+     "section": "",
+     "quote": "* 9mm Axle, N/A Speeds, 100mm Hub Width: Common bikes * 10mm Axle, 1 Speed, 110mm Hub Width: Older track bike, coaster hub * 10mm Axle, 5 or 1 (Track), 120mm Hub Width: Older road bikes and track bikes * 10mm Axle, 6-7 Speeds, 126mm Hub Width: Older road bikes",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "big_blue_book_p0219_c02",
+     "book": "big_blue_book",
+     "page": 219,
+     "section": "",
+     "quote": "* 12mm Thru Axle, 9 Speeds, 135mm Hub Width: Older rear MTB thru axles * 12mm Thru Axle, 9-12 Speeds, 142mm Hub Width: Thru axle * 12mm Thru Axle, 10-12 Speeds, 148mm Hub Width: Rear \"Boost\" standard * 12mm Thru Axle, 8-9 Speeds, 150mm Hub Width: Older downhil",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "comp-ebike-motor",
+   "type": "component",
+   "name": "E-Bike Electric Drive Motor",
+   "subsystem": "sys-drivetrain",
+   "aliases": [
+    "Drive Unit",
+    "Mid-Drive Motor",
+    "Hub Motor"
+   ],
+   "description": "Electric motor providing pedal assist or throttle propulsion.",
+   "properties": {},
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "Ai_generated_ebike_motor_p0003_c00",
+     "book": "Ai_generated_ebike_motor",
+     "page": 3,
+     "section": "1. GLOSSARY OF TERMS",
+     "quote": "Mid-Drive Motor A motor mounted at the bicycle's bottom bracket, driving through the chain or belt drivetrain.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "Ai_generated_ebike_motor_p0042_c02",
+     "book": "Ai_generated_ebike_motor",
+     "page": 42,
+     "section": "28. COMMON BRANDS AND MODELS — E-BIKE MID-DRIVE MOTORS",
+     "quote": "rque) Geared rear hub, 500–750W, 48V (or mid-drive preferred) Bafang G062, MAC Motor Front hub conversion (light assist) Geared front hub, 250W, 36V Bafang FM G311 front, Cute Q100 front Fat tire e-bike Wide-format DD or geared hub, 500–1000W Bafang RM G070, M",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "rule-controller-bms",
+   "type": "compatibility_rule",
+   "name": "Controller & BMS Operating Rule",
+   "subsystem": "sys-drivetrain",
+   "aliases": [
+    "BMS Current & Voltage Rule"
+   ],
+   "description": "Controller current draw must not exceed BMS rating, and controller voltage must match battery voltage.",
+   "properties": {},
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "Controller_Reference_p0006_c01",
+     "book": "Controller_Reference",
+     "page": 6,
+     "section": "Chapter 6.2 — BMS Current Rating vs Controller Current",
+     "quote": "The most common BMS-controller interaction problem is current mismatch.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "Controller_Reference_p0001_c03",
+     "book": "Controller_Reference",
+     "page": 1,
+     "section": "Chapter 1.2 — Controller Voltage Rating",
+     "quote": "The controller's voltage rating must match your battery voltage.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "ec-xiaomi-table",
+   "type": "error_code",
+   "name": "Xiaomi Diagnostic Error Code Table",
+   "subsystem": "sys-drivetrain",
+   "aliases": [
+    "Xiaomi Codes",
+    "Ninebot/Xiaomi Diagnostics"
+   ],
+   "description": "Curated diagnostic fault codes for light electric vehicles and e-bikes.",
+   "properties": {},
+   "status": "verified",
+   "evidence": [
+    {
+     "chunk_id": "xiaomi_ebike_escooter_p0001_c01",
+     "book": "xiaomi_ebike_escooter",
+     "page": 1,
+     "section": "4. The following error codes can point to problems with the battery or charger:",
+     "quote": "Error code 04096 means that the motor controller has no data to report, indicating bad wiring or a missing SN number; 2.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "xiaomi_ebike_escooter_p0001_c02",
+     "book": "xiaomi_ebike_escooter",
+     "page": 1,
+     "section": "5. The following error codes suggest issues with the controller or motor:",
+     "quote": "Error code 00512 means a charging low-temperature warning; (3).",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ]
+  },
+  {
+   "id": "unk-freehub-body-length",
+   "type": "unknown_requirement",
+   "name": "Unspecified Freehub Body Spline Length",
+   "subsystem": "sys-wheels",
+   "aliases": [
+    "Missing 36.75mm vs 8/9/10s Body Measurement"
+   ],
+   "description": "Whether an 11-speed road cassette needs a 36.75 mm freehub body cannot be decided: the dimension is absent from kb.db.",
+   "properties": {
+    "body_length_mm": {
+     "key": "body_length_mm",
+     "name": "Spline Length",
+     "value": "UNRESOLVED_IN_KB",
+     "is_critical": true,
+     "status": "unknown"
+    }
+   },
+   "status": "candidate",
+   "evidence": []
+  }
+ ],
+ "edges": [
+  {
+   "id": "edge-freehub-partof-hub",
+   "src": "comp-freehub-body",
+   "dst": "comp-rear-hub",
+   "type": "part_of",
+   "claim": "The freehub body is the ratcheting cassette carrier mounted on the rear hub.",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0238_c00",
+     "book": "big_blue_book",
+     "page": 238,
+     "quote": "FREEHUB REMOVAL & INSTALLATION Hubs designed with a freehub contain a ratcheting mechanism to allow cassette freewheeling.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.95
+    }
+   ],
+   "evidence_type": "service_manual",
+   "status": "verified",
+   "confidence": 0.95,
+   "conditions": [],
+   "conflicts": []
+  },
+  {
+   "id": "edge-cassette-fits-freehub",
+   "src": "comp-cassette",
+   "dst": "comp-freehub-body",
+   "type": "fits_into",
+   "claim": "A cassette is carried by the freehub body and engages its splines.",
+   "evidence": [
+    {
+     "chunk_id": "bike_repair_manual_chris_p0066_c00",
+     "book": "bike_repair_manual_chris",
+     "page": 66,
+     "quote": "STEP LOCATOR MAINTAINING YOUR TRANSMISSION • CHAIN, CASSETTE, AND CHAINSET Cassette and freewheel The cassette and freewheel allow the rear wheel to rotate while the pedals remain stationary.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "big_blue_book_p0200_c00",
+     "book": "big_blue_book",
+     "page": 200,
+     "quote": "Instead, a lockring is integrated into the cassette body and is turned by the tool fitting at the small end of the cassette (figure 3.8).",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ],
+   "evidence_type": "service_manual",
+   "status": "verified",
+   "confidence": 0.9,
+   "conditions": [],
+   "conflicts": []
+  },
+  {
+   "id": "edge-xdr-incomp-cassette",
+   "src": "comp-freehub-xdr",
+   "dst": "comp-cassette",
+   "type": "incompatible_with",
+   "claim": "An XDR-marked body accepts SRAM XDR cassettes only, so a standard cassette does not fit it.",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0244_c01",
+     "book": "big_blue_book",
+     "page": 244,
+     "quote": "**Cassette Body Details:** * **Type:** The cassette body is clearly labeled as \"XDR COMPATIBLE ONLY,\" indicating compatibility with SRAM XDR cassettes.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "big_blue_book_p0253_c01",
+     "book": "big_blue_book",
+     "page": 253,
+     "quote": "**Freehub Body:** * **Type:** XDR (XD Road) Compatible * **Markings:** Visible \"XDR\" logo with \"COMPATIBLE ONLY\" marking below.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ],
+   "evidence_type": "manufacturer_specification",
+   "status": "verified",
+   "confidence": 0.9,
+   "conditions": [
+    "Body engraved 'XDR COMPATIBLE ONLY'"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "edge-fluid-dot-incomp-mineral",
+   "src": "prop-fluid-dot",
+   "dst": "prop-fluid-mineral",
+   "type": "incompatible_with",
+   "claim": "DOT fluid must never be used in a mineral-oil brake system, and tools must not be shared.",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0731_c00",
+     "book": "big_blue_book",
+     "page": 731,
+     "quote": "Never use a DOT fluid or syringes used for DOT fluid with this system.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.98
+    },
+    {
+     "chunk_id": "big_blue_book_p0710_c00",
+     "book": "big_blue_book",
+     "page": 710,
+     "quote": "HAYES® HYDRAULIC CALIPER BRAKES Hayes® offers brakes in both mineral oil and hydraulic brakes using DOT 3 or DOT 4 brake fluid.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.98
+    }
+   ],
+   "evidence_type": "service_manual",
+   "status": "verified",
+   "confidence": 0.98,
+   "conditions": [],
+   "conflicts": []
+  },
+  {
+   "id": "edge-rotor6bolt-incomp-centerlock",
+   "src": "comp-rotor-6bolt",
+   "dst": "comp-hub-centerlock",
+   "type": "incompatible_with",
+   "claim": "A six-bolt rotor cannot mount to a Center Lock hub without a documented adapter.",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0679_c00",
+     "book": "big_blue_book",
+     "page": 679,
+     "quote": "The common system uses six bolts on a flange built into the hub shell.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.85
+    },
+    {
+     "chunk_id": "big_blue_book_p0679_c00",
+     "book": "big_blue_book",
+     "page": 679,
+     "quote": "FIGURE 13.14: Secure rotor bolts using T25 driver A “center-lock” hub is designed with splined fittings to accept rotors made with a matching internal pattern.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.85
+    }
+   ],
+   "evidence_type": "mechanical_principle",
+   "status": "needs_review",
+   "confidence": 0.85,
+   "conditions": [
+    "Adapter existence is not documented in kb.db"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "edge-hub-conforms-width",
+   "src": "comp-rear-hub",
+   "dst": "std-hub-width",
+   "type": "conforms_to",
+   "claim": "Rear hub width and axle type must match the frame dropout standard.",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0219_c01",
+     "book": "big_blue_book",
+     "page": 219,
+     "quote": "* 9mm Axle, N/A Speeds, 100mm Hub Width: Common bikes * 10mm Axle, 1 Speed, 110mm Hub Width: Older track bike, coaster hub * 10mm Axle, 5 or 1 (Track), 120mm Hub Width: Older road bikes and track bikes * 10mm Axle, 6-7 Speeds, 126mm Hub Width: Older road bikes",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.8
+    },
+    {
+     "chunk_id": "big_blue_book_p0219_c02",
+     "book": "big_blue_book",
+     "page": 219,
+     "quote": "* This is a *guide*, not an exhaustive list.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.8
+    }
+   ],
+   "evidence_type": "service_manual",
+   "status": "verified",
+   "confidence": 0.8,
+   "conditions": [
+    "Source table is explicitly 'a guide, not an exhaustive list'",
+    "Frame manufacturer remains responsible for specifying compatibility"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "edge-xdr-partof-hub",
+   "src": "comp-freehub-xdr",
+   "dst": "comp-rear-hub",
+   "type": "part_of",
+   "claim": "The cassette body is installed onto the hub body.",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0244_c01",
+     "book": "big_blue_book",
+     "page": 244,
+     "quote": "**Procedure Depiction:** * **Cassette Body Installation:** The cassette body is being installed onto the hub body.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ],
+   "evidence_type": "service_manual",
+   "status": "verified",
+   "confidence": 0.9,
+   "conditions": [],
+   "conflicts": []
+  },
+  {
+   "id": "edge-chainline-affects-derailleur",
+   "src": "prop-chainline",
+   "dst": "comp-rear-derailleur",
+   "type": "affects",
+   "claim": "Incorrect chainline causes shifting problems.",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0537_c02",
+     "book": "big_blue_book",
+     "page": 537,
+     "quote": "Incorrect chainline can cause shifting problems.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "big_blue_book_p0585_c00",
+     "book": "big_blue_book",
+     "page": 585,
+     "quote": "CHAINLINE Chainline is the relation of the front and rear sprockets to the center plane of the bicycle (figure 10.67).",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ],
+   "evidence_type": "service_manual",
+   "status": "verified",
+   "confidence": 0.9,
+   "conditions": [],
+   "conflicts": []
+  },
+  {
+   "id": "edge-stem-mounted-steerer",
+   "src": "comp-stem",
+   "dst": "comp-steerer",
+   "type": "mounted_on",
+   "claim": "A threadless stem clamps onto the steerer tube; its height is limited by the spacers on the steering column.",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0825_c00",
+     "book": "big_blue_book",
+     "page": 825,
+     "quote": "FIGURE 15.16: Threadless stem measurements: (A) stem length, (B) stem angle, (C) stem stack height Threadless stem height adjustability is limited by the number of extra spacers used along the steering column.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "big_blue_book_p0888_c00",
+     "book": "big_blue_book",
+     "page": 888,
+     "quote": "[VISUAL DATA]: **Technical Repair Diagram Analysis** **Subject:** Bicycle Stem Removal from Steerer Tube **Components & Materials:** 1.",
+     "evidence_grade": "B",
+     "linked_to_chunk": true,
+     "confidence": 0.7
+    }
+   ],
+   "evidence_type": "service_manual",
+   "status": "verified",
+   "confidence": 0.9,
+   "conditions": [],
+   "conflicts": []
+  },
+  {
+   "id": "edge-headset-interfaces-steerer",
+   "src": "comp-headset",
+   "dst": "comp-steerer",
+   "type": "interfaces_with",
+   "claim": "Headset bearings run on the steerer tube and are preloaded through the top cap and stem.",
+   "evidence": [
+    {
+     "chunk_id": "big_blue_book_p0051_c00",
+     "book": "big_blue_book",
+     "page": 51,
+     "quote": "CHAPTER 16 — HEADSETS Headset Types Headset Service Threadless Headset Service Threadless Headset Adjustment Threaded Headset Service Threaded Headset Adjustment",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.7
+    },
+    {
+     "chunk_id": "big_blue_book_p0861_c00",
+     "book": "big_blue_book",
+     "page": 861,
+     "quote": "The bolt in the top cap puts pressure on the stem.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.7
+    }
+   ],
+   "evidence_type": "service_manual",
+   "status": "needs_review",
+   "confidence": 0.7,
+   "conditions": [
+    "Evidence is a page-level description, not a torque specification"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "edge-bms-constrains-motor",
+   "src": "rule-controller-bms",
+   "dst": "comp-ebike-motor",
+   "type": "constrains",
+   "claim": "Controller current draw must not exceed the BMS rating, and controller voltage must match battery voltage.",
+   "evidence": [
+    {
+     "chunk_id": "Controller_Reference_p0006_c00",
+     "book": "Controller_Reference",
+     "page": 6,
+     "quote": "The BMS (Battery Management System) is a circuit board inside the battery pack that protects cells from overcharge, over-discharge, overcurrent, and short circuit.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    },
+    {
+     "chunk_id": "Controller_Reference_p0001_c03",
+     "book": "Controller_Reference",
+     "page": 1,
+     "quote": "The controller's voltage rating must match your battery voltage.",
+     "evidence_grade": "A",
+     "linked_to_chunk": true,
+     "confidence": 0.9
+    }
+   ],
+   "evidence_type": "curated_rule",
+   "status": "verified",
+   "confidence": 0.9,
+   "conditions": [],
+   "conflicts": []
+  },
+  {
+   "id": "edge-unknown-freehub-length",
+   "src": "unk-freehub-body-length",
+   "dst": "comp-cassette",
+   "type": "unknown_due_to_missing_evidence",
+   "claim": "Whether an 11-speed road cassette needs a 36.75 mm freehub body cannot be decided: the dimension is absent from kb.db.",
+   "evidence": [],
+   "evidence_type": "inference",
+   "status": "needs_review",
+   "confidence": 0.0,
+   "conditions": [
+    "Resolve by measuring the freehub body or sourcing the manufacturer specification"
+   ],
+   "conflicts": []
+  }
+ ],
+ "provenance": {
+  "counts": {
+   "nodes": 27,
+   "edges": 12,
+   "node_evidence": 39,
+   "edge_evidence": 20
+  },
+  "note": "node-level evidence restored by supervisor; uncited properties downgraded to needs_review"
+ }
+}

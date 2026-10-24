@@ -1,0 +1,224 @@
+{
+  "schema_version": "1.0.0",
+  "batch": "phase5-hubfit-7",
+  "nodes": [
+    {
+      "id": "std-rear-boost-148mm",
+      "type": "standard",
+      "name": "Rear \"Boost\" standard",
+      "subsystem": "sys-wheels",
+      "aliases": [],
+      "description": "10mm Axle, 10-12 Speeds, 148mm Hub Width: Rear \"Boost\" standard",
+      "status": "verified",
+      "batch": "phase5-hubfit-7",
+      "properties": {
+        "hub_width": {
+          "key": "hub_width",
+          "name": "Hub Width",
+          "value": "148mm",
+          "status": "needs_review",
+          "note": "10mm Axle, 10-12 Speeds, 148mm Hub Width: Rear \"Boost\" standard"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0219_c01",
+          "book": "big_blue_book",
+          "page": 219,
+          "quote": "10mm Axle, 10-12 Speeds, 148mm Hub Width: Rear \"Boost\" standard",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "std-rear-fat-tire-170mm",
+      "type": "standard",
+      "name": "170mm Hub Width: Fat tire rear open",
+      "subsystem": "sys-wheels",
+      "aliases": [],
+      "description": "10mm Axle, 10-12 Speeds, 170mm Hub Width: Fat tire rear open",
+      "status": "verified",
+      "batch": "phase5-hubfit-7",
+      "properties": {
+        "hub_width": {
+          "key": "hub_width",
+          "name": "Hub Width",
+          "value": "170mm",
+          "status": "needs_review",
+          "note": "10mm Axle, 10-12 Speeds, 170mm Hub Width: Fat tire rear open"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0219_c01",
+          "book": "big_blue_book",
+          "page": 219,
+          "quote": "10mm Axle, 10-12 Speeds, 170mm Hub Width: Fat tire rear open",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "rule-hub-135mm",
+      "type": "compatibility_rule",
+      "name": "135mm Hub Width: MTB internal gear hubs, road disc brake hubs",
+      "subsystem": "sys-wheels",
+      "aliases": [],
+      "description": "10mm Axle, 6-12 Speeds, 135mm Hub Width: MTB internal gear hubs, road disc brake hubs",
+      "status": "verified",
+      "batch": "phase5-hubfit-7",
+      "properties": {
+        "hub_width": {
+          "key": "hub_width",
+          "name": "Hub Width",
+          "value": "135mm",
+          "status": "needs_review",
+          "note": "10mm Axle, 6-12 Speeds, 135mm Hub Width: MTB internal gear hubs, road disc brake hubs"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0219_c01",
+          "book": "big_blue_book",
+          "page": 219,
+          "quote": "10mm Axle, 6-12 Speeds, 135mm Hub Width: MTB internal gear hubs, road disc brake hubs",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "rule-hub-130mm",
+      "type": "compatibility_rule",
+      "name": "130mm Hub Width: Modern road bikes, hybrids",
+      "subsystem": "sys-wheels",
+      "aliases": [],
+      "description": "10mm Axle, 8-12 Speeds, 130mm Hub Width: Modern road bikes, hybrids",
+      "status": "verified",
+      "batch": "phase5-hubfit-7",
+      "properties": {
+        "hub_width": {
+          "key": "hub_width",
+          "name": "Hub Width",
+          "value": "130mm",
+          "status": "needs_review",
+          "note": "10mm Axle, 8-12 Speeds, 130mm Hub Width: Modern road bikes, hybrids"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0219_c01",
+          "book": "big_blue_book",
+          "page": 219,
+          "quote": "10mm Axle, 8-12 Speeds, 130mm Hub Width: Modern road bikes, hybrids",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-rear-hub-conforms-boost-148mm",
+      "src": "comp-rear-hub",
+      "dst": "std-rear-boost-148mm",
+      "type": "conforms_to",
+      "claim": "10mm Axle, 10-12 Speeds, 148mm Hub Width: Rear \"Boost\" standard",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-hubfit-7",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0219_c01",
+          "book": "big_blue_book",
+          "page": 219,
+          "quote": "10mm Axle, 10-12 Speeds, 148mm Hub Width: Rear \"Boost\" standard",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-rear-hub-conforms-fat-tire-170mm",
+      "src": "comp-rear-hub",
+      "dst": "std-rear-fat-tire-170mm",
+      "type": "conforms_to",
+      "claim": "10mm Axle, 10-12 Speeds, 170mm Hub Width: Fat tire rear open",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-hubfit-7",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0219_c01",
+          "book": "big_blue_book",
+          "page": 219,
+          "quote": "10mm Axle, 10-12 Speeds, 170mm Hub Width: Fat tire rear open",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-rule-hub-135mm-constrains-wheels",
+      "src": "rule-hub-135mm",
+      "dst": "sys-wheels",
+      "type": "constrains",
+      "claim": "10mm Axle, 6-12 Speeds, 135mm Hub Width: MTB internal gear hubs, road disc brake hubs",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-hubfit-7",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0219_c01",
+          "book": "big_blue_book",
+          "page": 219,
+          "quote": "10mm Axle, 6-12 Speeds, 135mm Hub Width: MTB internal gear hubs, road disc brake hubs",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-rule-hub-130mm-constrains-wheels",
+      "src": "rule-hub-130mm",
+      "dst": "sys-wheels",
+      "type": "constrains",
+      "claim": "10mm Axle, 8-12 Speeds, 130mm Hub Width: Modern road bikes, hybrids",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-hubfit-7",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0219_c01",
+          "book": "big_blue_book",
+          "page": 219,
+          "quote": "10mm Axle, 8-12 Speeds, 130mm Hub Width: Modern road bikes, hybrids",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    }
+  ]
+}

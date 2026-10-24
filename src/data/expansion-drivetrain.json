@@ -1,0 +1,397 @@
+{
+  "schema_version": "1.0.0",
+  "batch": "phase5-drivetrain-3",
+  "nodes": [
+    {
+      "id": "comp-freehub-ratchet",
+      "type": "subcomponent",
+      "name": "Freehub Ratcheting Mechanism",
+      "subsystem": "sys-drivetrain",
+      "aliases": ["Freehub Ratchet", "Internal Ratchet Mechanism"],
+      "description": "Internal ratcheting mechanism contained within a freehub that allows cassette freewheeling when pedals are stationary.",
+      "status": "verified",
+      "batch": "phase5-drivetrain-3",
+      "properties": {
+        "freewheel_function": {
+          "key": "freewheel_function",
+          "name": "Freewheel Operation",
+          "value": "ratcheting",
+          "status": "needs_review",
+          "note": "Contains ratcheting mechanism to allow cassette freewheeling"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0238_c00",
+          "book": "big_blue_book",
+          "page": 238,
+          "section": "FREEHUB REMOVAL & INSTALLATION",
+          "quote": "Hubs designed with a freehub contain a ratcheting mechanism to allow\ncassette freewheeling.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-freehub-cartridge-bearing",
+      "type": "subcomponent",
+      "name": "Freehub Cartridge Bearing",
+      "subsystem": "sys-drivetrain",
+      "aliases": ["Freehub Body Bearing", "Internal Cartridge Bearing"],
+      "description": "Cartridge bearings pressed into the freehub body to support rotational loads between the hub axle and cassette.",
+      "status": "verified",
+      "batch": "phase5-drivetrain-3",
+      "properties": {
+        "bearing_type": {
+          "key": "bearing_type",
+          "name": "Bearing Construction",
+          "value": "cartridge",
+          "status": "needs_review",
+          "note": "Cartridge bearings inside freehub pressed in evenly"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0250_c00",
+          "book": "big_blue_book",
+          "page": 250,
+          "section": "FREEHUB BEARINGS",
+          "quote": "The hub design may include cartridge bearings inside the freehub.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "std-chainline-50mm",
+      "type": "standard",
+      "name": "Crankset 50mm Chainline Specification",
+      "subsystem": "sys-drivetrain",
+      "aliases": ["50mm Chainline", "Front Derailleur 50mm Standard"],
+      "description": "Design chainline standard where the middle of the front chainrings is positioned 50mm from the bicycle center plane for optimal front derailleur operation.",
+      "status": "verified",
+      "batch": "phase5-drivetrain-3",
+      "properties": {
+        "target_distance": {
+          "key": "target_distance",
+          "name": "Chainline Distance",
+          "value": 50,
+          "unit": "mm",
+          "status": "needs_review",
+          "note": "Middle of chainrings 50mm from bike centerline"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0585_c00",
+          "book": "big_blue_book",
+          "page": 585,
+          "section": "CHAINLINE",
+          "quote": "As an example, a\nfront crankset and/or front derailleur might be designed to have a chainline\nof 50mm. The front derailleur would then work best when the middle of the\nchainrings are 50mm from the bike centerline.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-derailleur-shift-wire",
+      "type": "subcomponent",
+      "name": "Rear Derailleur Shift Wire",
+      "subsystem": "sys-drivetrain",
+      "aliases": ["Electronic Derailleur Wire", "Shift Wire Plug"],
+      "description": "Shift wire plugged into the rear derailleur body and secured by a pinch screw.",
+      "status": "verified",
+      "batch": "phase5-drivetrain-3",
+      "properties": {
+        "retention": {
+          "key": "retention",
+          "name": "Wire Retention Mechanism",
+          "value": "pinch screw",
+          "status": "needs_review",
+          "note": "Shift wire plugs into body and is held in by pinch screw"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0637_c00",
+          "book": "big_blue_book",
+          "page": 637,
+          "section": "REAR DERAILLEUR",
+          "quote": "The shift\nwire plugs into the body, and is held in by a pinch screw (figure 11.27).\nAlways loosen this screw before attempting to pull the plug.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "comp-integrated-lockring",
+      "type": "subcomponent",
+      "name": "SRAM XD Integrated Cassette Lockring",
+      "subsystem": "sys-drivetrain",
+      "aliases": ["Integrated Lockring", "XD Lockring"],
+      "description": "Lockring integrated into the cassette body turned by a tool fitting at the small end of the cassette on SRAM XD/XDR systems.",
+      "status": "verified",
+      "batch": "phase5-drivetrain-3",
+      "properties": {
+        "tool_fitting": {
+          "key": "tool_fitting",
+          "name": "Tool Interface",
+          "value": "FR-5 series",
+          "status": "needs_review",
+          "note": "Turned by tool fitting at small end using FR-5 series tools"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0200_c00",
+          "book": "big_blue_book",
+          "page": 200,
+          "quote": "removable lockring at the outer end of the freehub. Instead, a lockring is\nintegrated into the cassette body and is turned by the tool fitting at the small\nend of the cassette (figure 3.8). SRAM® XD™ and XDR™ compatible\ncassettes use the Park Tool FR-5 series of lockring tools.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "std-chain-pitch-unconfirmed",
+      "type": "standard",
+      "name": "Roller Chain Pin-to-Pin Pitch (unconfirmed)",
+      "subsystem": "sys-drivetrain",
+      "aliases": ["Estimated Chain Pitch"],
+      "description": "Estimated ~0.5 inch (12.7 mm) roller chain pin-to-pin pitch from visual diagram analysis.",
+      "status": "needs_review",
+      "batch": "phase5-drivetrain-3",
+      "properties": {
+        "estimated_pitch": {
+          "key": "estimated_pitch",
+          "name": "Estimated Pin-to-Pin Distance",
+          "value": "12.7 mm",
+          "status": "needs_review",
+          "note": "Pin-to-pin distance appears to be ~0.5 inch (12.7 mm)"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0637_c00",
+          "book": "big_blue_book",
+          "page": 637,
+          "section": "REAR DERAILLEUR",
+          "quote": "Pin-to-pin distance appears to be ~0.5 inch (12.7 mm).",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "id": "std-xdr-bearing-dim-unconfirmed",
+      "type": "standard",
+      "name": "XDR Cassette Body Bearing Dimensions (unconfirmed)",
+      "subsystem": "sys-drivetrain",
+      "aliases": ["Estimated XDR Bearing Size"],
+      "description": "Visually estimated 15mm ID x 28mm OD bearing dimension for XDR cassette body from repair diagram inspection.",
+      "status": "needs_review",
+      "batch": "phase5-drivetrain-3",
+      "properties": {
+        "estimated_dimensions": {
+          "key": "estimated_dimensions",
+          "name": "Estimated Dimensions",
+          "value": "15mm ID x 28mm OD",
+          "status": "needs_review",
+          "note": "Visually identified with dimensions approximately 15mm ID x 28mm OD"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0244_c01",
+          "book": "big_blue_book",
+          "page": 244,
+          "quote": "The cassette body contains a bearing (visually identified with dimensions approximately 15mm ID x 28mm OD), with a stainless steel race.",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.85
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-freehub-ratchet-part-of-body",
+      "src": "comp-freehub-ratchet",
+      "dst": "comp-freehub-body",
+      "type": "part_of",
+      "claim": "The internal ratcheting mechanism is part of the freehub assembly.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-drivetrain-3",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0238_c00",
+          "book": "big_blue_book",
+          "page": 238,
+          "section": "FREEHUB REMOVAL & INSTALLATION",
+          "quote": "Hubs designed with a freehub contain a ratcheting mechanism to allow\ncassette freewheeling.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-cartridge-bearing-part-of-freehub",
+      "src": "comp-freehub-cartridge-bearing",
+      "dst": "comp-freehub-body",
+      "type": "part_of",
+      "claim": "Cartridge bearings are housed inside the freehub body assembly.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-drivetrain-3",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0250_c00",
+          "book": "big_blue_book",
+          "page": 250,
+          "section": "FREEHUB BEARINGS",
+          "quote": "The hub design may include cartridge bearings inside the freehub.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-integrated-lockring-part-of-cassette",
+      "src": "comp-integrated-lockring",
+      "dst": "comp-cassette",
+      "type": "part_of",
+      "claim": "Lockring is integrated into the cassette body on SRAM XD/XDR cassettes.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-drivetrain-3",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0200_c00",
+          "book": "big_blue_book",
+          "page": 200,
+          "quote": "Instead, a lockring is\nintegrated into the cassette body and is turned by the tool fitting at the small\nend of the cassette (figure 3.8).",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-shift-wire-part-of-derailleur",
+      "src": "comp-derailleur-shift-wire",
+      "dst": "comp-rear-derailleur",
+      "type": "part_of",
+      "claim": "The shift wire is part of the rear derailleur assembly and connects to the body.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-drivetrain-3",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0637_c00",
+          "book": "big_blue_book",
+          "page": 637,
+          "section": "REAR DERAILLEUR",
+          "quote": "The shift\nwire plugs into the body, and is held in by a pinch screw (figure 11.27).\nAlways loosen this screw before attempting to pull the plug.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-chainline-has-property-50mm",
+      "src": "std-chainline-50mm",
+      "dst": "prop-chainline",
+      "type": "has_property",
+      "claim": "The 50mm chainline standard specifies the chainline distance property.",
+      "status": "verified",
+      "evidence_type": "service_manual",
+      "confidence": 1.0,
+      "conditions": [],
+      "conflicts": [],
+      "batch": "phase5-drivetrain-3",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0585_c00",
+          "book": "big_blue_book",
+          "page": 585,
+          "section": "CHAINLINE",
+          "quote": "As an example, a\nfront crankset and/or front derailleur might be designed to have a chainline\nof 50mm.",
+          "evidence_grade": "A",
+          "linked_to_chunk": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "edge-derailleur-conforms-to-pitch",
+      "src": "comp-rear-derailleur",
+      "dst": "std-chain-pitch-unconfirmed",
+      "type": "conforms_to",
+      "claim": "Rear derailleur chain links visually appear to have approximately 12.7 mm pitch.",
+      "status": "needs_review",
+      "evidence_type": "service_manual",
+      "confidence": 0.85,
+      "conditions": ["Requires precise pitch gauge verification"],
+      "conflicts": [],
+      "batch": "phase5-drivetrain-3",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0637_c00",
+          "book": "big_blue_book",
+          "page": 637,
+          "section": "REAR DERAILLEUR",
+          "quote": "Pin-to-pin distance appears to be ~0.5 inch (12.7 mm).",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "id": "edge-xdr-conforms-to-bearing-dim",
+      "src": "comp-freehub-xdr",
+      "dst": "std-xdr-bearing-dim-unconfirmed",
+      "type": "conforms_to",
+      "claim": "XDR cassette body bearing dimensions estimated at 15mm ID x 28mm OD from visual inspection.",
+      "status": "needs_review",
+      "evidence_type": "service_manual",
+      "confidence": 0.85,
+      "conditions": ["Requires caliper verification against manufacturer technical documentation"],
+      "conflicts": [],
+      "batch": "phase5-drivetrain-3",
+      "evidence": [
+        {
+          "chunk_id": "big_blue_book_p0244_c01",
+          "book": "big_blue_book",
+          "page": 244,
+          "quote": "The cassette body contains a bearing (visually identified with dimensions approximately 15mm ID x 28mm OD), with a stainless steel race.",
+          "evidence_grade": "B",
+          "linked_to_chunk": true,
+          "confidence": 0.85
+        }
+      ]
+    }
+  ]
+}
